@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3 -refsym FA /home/linus/Projects/ISE/Lab2/FA.sch /home/linus/Projects/ISE/Lab2/FA.sym 

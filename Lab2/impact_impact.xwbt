@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/linus/Projects/ISE/Lab2/impact.xsl
+OUTFILE=/home/linus/Projects/ISE/Lab2/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/linus/Projects/ISE/Lab2
+LICENSE=iMPACT
+USER_INFO=iMPACT

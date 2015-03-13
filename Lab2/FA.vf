@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.5
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FA.vf
+// /___/   /\     Timestamp : 03/13/2015 15:02:59
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog /home/linus/Projects/ISE/Lab2/FA.vf -w /home/linus/Projects/ISE/Lab2/FA.sch
+//Design Name: FA
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FA(A, 
+          B, 
+          CI, 
+          CO, 
+          S);
+
+    input A;
+    input B;
+    input CI;
+   output CO;
+   output S;
+   
+   wire XLXN_72;
+   wire XLXN_90;
+   wire XLXN_105;
+   wire XLXN_106;
+   
+   AND2  XLXI_37 (.I0(B), 
+                 .I1(A), 
+                 .O(XLXN_105));
+   XOR2  XLXI_38 (.I0(B), 
+                 .I1(A), 
+                 .O(XLXN_72));
+   XOR2  XLXI_39 (.I0(CI), 
+                 .I1(XLXN_72), 
+                 .O(S));
+   OR2  XLXI_42 (.I0(A), 
+                .I1(B), 
+                .O(XLXN_90));
+   AND2  XLXI_43 (.I0(XLXN_90), 
+                 .I1(CI), 
+                 .O(XLXN_106));
+   OR2  XLXI_48 (.I0(XLXN_106), 
+                .I1(XLXN_105), 
+                .O(CO));
+endmodule

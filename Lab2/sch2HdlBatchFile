@@ -1,0 +1,2 @@
+sch2hdl,-intstyle,ise,-family,spartan3,-verilog,/home/linus/Projects/ISE/Lab2/FA.vf,-w,/home/linus/Projects/ISE/Lab2/FA.sch
+sch2hdl,-intstyle,ise,-family,spartan3,-verilog,/home/linus/Projects/ISE/Lab2/Adder.vf,-w,/home/linus/Projects/ISE/Lab2/Adder.sch
