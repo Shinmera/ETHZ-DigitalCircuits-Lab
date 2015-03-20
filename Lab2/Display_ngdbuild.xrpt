@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Fri Mar 13 15:03:12 2015">
+  <application stringID="NgdBuild" timeStamp="Fri Mar 20 14:07:02 2015">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -45,7 +45,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz"/>
-          <item stringID="speed" value="1575.968 MHz"/>
+          <item stringID="speed" value="1803.437 MHz"/>
         </row>
       </table>
     </section>
@@ -67,17 +67,21 @@
       </section>
       <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_AND2" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUF" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="8"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="5"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OR2" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XOR2" value="8"/>
       </section>
       <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_AND2" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUF" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="8"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="5"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OR2" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XOR2" value="8"/>
       </section>

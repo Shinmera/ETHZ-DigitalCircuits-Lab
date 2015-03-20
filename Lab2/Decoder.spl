@@ -1,0 +1,8 @@
+[Inputs]
+=s[3:0]=
+[Outputs]
+=d[6:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Decoder
+

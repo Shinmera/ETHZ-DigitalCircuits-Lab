@@ -1,0 +1,4 @@
+verilog work "FA.vf"
+verilog work "Decoder.v"
+verilog work "Adder.vf"
+verilog work "Display.vf"

@@ -1,0 +1,5 @@
+set -tmpdir "/home/linus/Projects/ISE/Lab2/xst/projnav.tmp"
+set -xsthdpdir "/home/linus/Projects/ISE/Lab2/xst"
+elaborate
+-ifn Decoder.prj
+-ifmt mixed
