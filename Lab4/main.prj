@@ -1,0 +1,3 @@
+verilog work "thunderbird.v"
+verilog work "clk_div.v"
+verilog work "main.v"

@@ -1,0 +1,11 @@
+NET "clk" LOC = "T9";
+NET "rst" LOC = "L14";
+NET "left" LOC = "G12";
+NET "right" LOC = "F12";
+
+NET "L[0]" LOC = "P11";
+NET "L[1]" LOC = "P12";
+NET "L[2]" LOC = "N12";
+NET "R[2]" LOC = "L12";
+NET "R[1]" LOC = "P14";
+NET "R[0]" LOC = "K12";
