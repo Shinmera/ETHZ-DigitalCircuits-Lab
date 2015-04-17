@@ -1,0 +1,161 @@
+Release 14.5 par P.58f (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+linuy::  Fri Apr 17 14:50:15 2015
+
+par -w -intstyle ise -ol high -t 1 ALU_map.ncd ALU.ncd ALU.pcf 
+
+
+Constraints file: ALU.pcf.
+Loading device for application Rf_Device from file '3s200.nph' in environment /opt/Xilinx/14.5/ISE_DS/ISE/.
+   "ALU" is an NCD, version 3.2, device xc3s200, package ft256, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.39 2013-03-26".
+
+
+Device Utilization Summary:
+
+   Number of External IOBs                 101 out of 173    58%
+      Number of LOCed IOBs                   0 out of 101     0%
+
+   Number of Slices                        118 out of 1920    6%
+      Number of SLICEMs                      0 out of 960     0%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 0 secs 
+Finished initial Timing Analysis.  REAL time: 0 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 0 secs 
+Total CPU  time at the beginning of Placer: 0 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:5d44) REAL time: 1 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:5d44) REAL time: 1 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:5d44) REAL time: 1 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+....
+Phase 4.2  Initial Clock and IO Placement (Checksum:5d44) REAL time: 1 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:5d44) REAL time: 1 secs 
+
+Phase 6.3  Local Placement Optimization
+...
+Phase 6.3  Local Placement Optimization (Checksum:df774634) REAL time: 1 secs 
+
+Phase 7.5  Local Placement Optimization
+Phase 7.5  Local Placement Optimization (Checksum:df774634) REAL time: 1 secs 
+
+Phase 8.8  Global Placement
+....
+....
+......
+....
+....
+..........
+Phase 8.8  Global Placement (Checksum:dc92ea79) REAL time: 2 secs 
+
+Phase 9.5  Local Placement Optimization
+Phase 9.5  Local Placement Optimization (Checksum:dc92ea79) REAL time: 2 secs 
+
+Phase 10.18  Placement Optimization
+Phase 10.18  Placement Optimization (Checksum:c10739cf) REAL time: 2 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:c10739cf) REAL time: 2 secs 
+
+Total REAL time to Placer completion: 2 secs 
+Total CPU  time to Placer completion: 2 secs 
+Writing design to file ALU.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 814 unrouted;      REAL time: 3 secs 
+
+Phase  2  : 814 unrouted;      REAL time: 3 secs 
+
+Phase  3  : 385 unrouted;      REAL time: 3 secs 
+
+Phase  4  : 385 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+
+Updating file: ALU.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+
+Total REAL time to Router completion: 3 secs 
+Total CPU time to Router completion: 3 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_ALU = MAXDELAY FROM TIMEGRP "PADS" TO  | MAXDELAY    |     0.064ns|    19.936ns|       0|           0
+  TIMEGRP "PADS" 20 ns                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 3 secs 
+Total CPU time to PAR completion: 3 secs 
+
+Peak Memory Usage:  505 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file ALU.ncd
+
+
+
+PAR done!

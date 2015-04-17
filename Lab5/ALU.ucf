@@ -1,0 +1,3 @@
+
+#Created by Constraints Editor (xc3s200-ft256-4) - 2015/04/17
+TIMESPEC TS_ALU = FROM "PADS" TO "PADS" 20 ns;

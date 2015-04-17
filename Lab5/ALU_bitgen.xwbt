@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/linus/Projects/ISE/Lab5/ALU.ncd
+OUTFILE=/home/linus/Projects/ISE/Lab5/ALU.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=/home/linus/Projects/ISE/Lab5
+LICENSE=WebPack
+USER_INFO=211013283_0_0_472

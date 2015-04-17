@@ -1,0 +1,9 @@
+//! **************************************************************************
+// Written by: Map P.58f on Fri Apr 17 14:50:12 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+TIMEGRP "PADS" = PADS(*);
+TS_ALU = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "PADS" 20 ns;
+SCHEMATIC END;
+

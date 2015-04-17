@@ -1,0 +1,2236 @@
+--------------------------------------------------------------------------------
+Release 14.5 Trace  (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.5/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml ALU.twx ALU.ncd -o ALU.twr ALU.pcf -ucf ALU.ucf
+
+Design file:              ALU.ncd
+Physical constraint file: ALU.pcf
+Device,package,speed:     xc3s200,ft256,-4 (PRODUCTION 1.39 2013-03-26)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_ALU = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "PADS" 20 
+ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 7360 paths analyzed, 33 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is  19.936ns.
+--------------------------------------------------------------------------------
+
+Paths for end point out<31> (L4.PAD), 208 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.064ns (requirement - data path)
+  Source:               A<5> (PAD)
+  Destination:          out<31> (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      19.936ns (Levels of Logic = 18)
+
+  Maximum Data Path: A<5> to out<31>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F15.I                Tiopi                 1.938   A<5>
+                                                       A<5>
+                                                       A_5_IBUF
+    SLICE_X15Y32.G1      net (fanout=4)        3.681   A_5_IBUF
+    SLICE_X15Y32.COUT    Topcyg                1.039   out_sub0001<4>
+                                                       Msub_out_sub0001_lut<5>
+                                                       Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.COUT    Tbyp                  0.128   out_sub0001<6>
+                                                       Msub_out_sub0001_cy<6>
+                                                       Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.COUT    Tbyp                  0.128   out_sub0001<8>
+                                                       Msub_out_sub0001_cy<8>
+                                                       Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.COUT    Tbyp                  0.128   out_sub0001<10>
+                                                       Msub_out_sub0001_cy<10>
+                                                       Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.COUT    Tbyp                  0.128   out_sub0001<12>
+                                                       Msub_out_sub0001_cy<12>
+                                                       Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.COUT    Tbyp                  0.128   out_sub0001<14>
+                                                       Msub_out_sub0001_cy<14>
+                                                       Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.COUT    Tbyp                  0.128   out_sub0001<16>
+                                                       Msub_out_sub0001_cy<16>
+                                                       Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.COUT    Tbyp                  0.128   out_sub0001<18>
+                                                       Msub_out_sub0001_cy<18>
+                                                       Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.COUT    Tbyp                  0.128   out_sub0001<20>
+                                                       Msub_out_sub0001_cy<20>
+                                                       Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.COUT    Tbyp                  0.128   out_sub0001<22>
+                                                       Msub_out_sub0001_cy<22>
+                                                       Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.COUT    Tbyp                  0.128   out_sub0001<24>
+                                                       Msub_out_sub0001_cy<24>
+                                                       Msub_out_sub0001_cy<25>
+    SLICE_X15Y43.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<25>
+    SLICE_X15Y43.COUT    Tbyp                  0.128   out_sub0001<26>
+                                                       Msub_out_sub0001_cy<26>
+                                                       Msub_out_sub0001_cy<27>
+    SLICE_X15Y44.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<27>
+    SLICE_X15Y44.COUT    Tbyp                  0.128   out_sub0001<28>
+                                                       Msub_out_sub0001_cy<28>
+                                                       Msub_out_sub0001_cy<29>
+    SLICE_X15Y45.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<29>
+    SLICE_X15Y45.Y       Tciny                 0.923   out_sub0001<30>
+                                                       Msub_out_sub0001_cy<30>
+                                                       Msub_out_sub0001_xor<31>
+    SLICE_X13Y40.G2      net (fanout=1)        0.822   out_sub0001<31>
+    SLICE_X13Y40.Y       Tilo                  0.551   out_31_OBUF
+                                                       out<31>86
+    SLICE_X13Y40.F3      net (fanout=1)        0.015   out<31>86
+    SLICE_X13Y40.X       Tilo                  0.551   out_31_OBUF
+                                                       out<31>119
+    L4.O1                net (fanout=2)        4.518   out_31_OBUF
+    L4.PAD               Tioop                 4.362   out<31>
+                                                       out_31_OBUF
+                                                       out<31>
+    -------------------------------------------------  ---------------------------
+    Total                                     19.936ns (10.900ns logic, 9.036ns route)
+                                                       (54.7% logic, 45.3% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.100ns (requirement - data path)
+  Source:               B<15> (PAD)
+  Destination:          out<31> (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      19.900ns (Levels of Logic = 13)
+
+  Maximum Data Path: B<15> to out<31>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    K3.I                 Tiopi                 1.938   B<15>
+                                                       B<15>
+                                                       B_15_IBUF
+    SLICE_X14Y39.G2      net (fanout=4)        3.666   B_15_IBUF
+    SLICE_X14Y39.COUT    Topcyg                1.096   out_addsub0000<14>
+                                                       Madd_out_addsub0000_lut<15>
+                                                       Madd_out_addsub0000_cy<15>
+    SLICE_X14Y40.CIN     net (fanout=1)        0.000   Madd_out_addsub0000_cy<15>
+    SLICE_X14Y40.COUT    Tbyp                  0.120   out_addsub0000<16>
+                                                       Madd_out_addsub0000_cy<16>
+                                                       Madd_out_addsub0000_cy<17>
+    SLICE_X14Y41.CIN     net (fanout=1)        0.000   Madd_out_addsub0000_cy<17>
+    SLICE_X14Y41.COUT    Tbyp                  0.120   out_addsub0000<18>
+                                                       Madd_out_addsub0000_cy<18>
+                                                       Madd_out_addsub0000_cy<19>
+    SLICE_X14Y42.CIN     net (fanout=1)        0.000   Madd_out_addsub0000_cy<19>
+    SLICE_X14Y42.COUT    Tbyp                  0.120   out_addsub0000<20>
+                                                       Madd_out_addsub0000_cy<20>
+                                                       Madd_out_addsub0000_cy<21>
+    SLICE_X14Y43.CIN     net (fanout=1)        0.000   Madd_out_addsub0000_cy<21>
+    SLICE_X14Y43.COUT    Tbyp                  0.120   out_addsub0000<22>
+                                                       Madd_out_addsub0000_cy<22>
+                                                       Madd_out_addsub0000_cy<23>
+    SLICE_X14Y44.CIN     net (fanout=1)        0.000   Madd_out_addsub0000_cy<23>
+    SLICE_X14Y44.COUT    Tbyp                  0.120   out_addsub0000<24>
+                                                       Madd_out_addsub0000_cy<24>
+                                                       Madd_out_addsub0000_cy<25>
+    SLICE_X14Y45.CIN     net (fanout=1)        0.000   Madd_out_addsub0000_cy<25>
+    SLICE_X14Y45.COUT    Tbyp                  0.120   out_addsub0000<26>
+                                                       Madd_out_addsub0000_cy<26>
+                                                       Madd_out_addsub0000_cy<27>
+    SLICE_X14Y46.CIN     net (fanout=1)        0.000   Madd_out_addsub0000_cy<27>
+    SLICE_X14Y46.COUT    Tbyp                  0.120   out_addsub0000<28>
+                                                       Madd_out_addsub0000_cy<28>
+                                                       Madd_out_addsub0000_cy<29>
+    SLICE_X14Y47.CIN     net (fanout=1)        0.000   Madd_out_addsub0000_cy<29>
+    SLICE_X14Y47.Y       Tciny                 0.923   out_addsub0000<30>
+                                                       Madd_out_addsub0000_cy<30>
+                                                       Madd_out_addsub0000_xor<31>
+    SLICE_X13Y43.F2      net (fanout=1)        0.903   out_addsub0000<31>
+    SLICE_X13Y43.X       Tilo                  0.551   out<31>16
+                                                       out<31>16
+    SLICE_X13Y40.F2      net (fanout=1)        0.552   out<31>16
+    SLICE_X13Y40.X       Tilo                  0.551   out_31_OBUF
+                                                       out<31>119
+    L4.O1                net (fanout=2)        4.518   out_31_OBUF
+    L4.PAD               Tioop                 4.362   out<31>
+                                                       out_31_OBUF
+                                                       out<31>
+    -------------------------------------------------  ---------------------------
+    Total                                     19.900ns (10.261ns logic, 9.639ns route)
+                                                       (51.6% logic, 48.4% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.214ns (requirement - data path)
+  Source:               A<5> (PAD)
+  Destination:          out<31> (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      19.786ns (Levels of Logic = 18)
+
+  Maximum Data Path: A<5> to out<31>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F15.I                Tiopi                 1.938   A<5>
+                                                       A<5>
+                                                       A_5_IBUF
+    SLICE_X15Y32.G1      net (fanout=4)        3.681   A_5_IBUF
+    SLICE_X15Y32.COUT    Topcyg                0.889   out_sub0001<4>
+                                                       Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.COUT    Tbyp                  0.128   out_sub0001<6>
+                                                       Msub_out_sub0001_cy<6>
+                                                       Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.COUT    Tbyp                  0.128   out_sub0001<8>
+                                                       Msub_out_sub0001_cy<8>
+                                                       Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.COUT    Tbyp                  0.128   out_sub0001<10>
+                                                       Msub_out_sub0001_cy<10>
+                                                       Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.COUT    Tbyp                  0.128   out_sub0001<12>
+                                                       Msub_out_sub0001_cy<12>
+                                                       Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.COUT    Tbyp                  0.128   out_sub0001<14>
+                                                       Msub_out_sub0001_cy<14>
+                                                       Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.COUT    Tbyp                  0.128   out_sub0001<16>
+                                                       Msub_out_sub0001_cy<16>
+                                                       Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.COUT    Tbyp                  0.128   out_sub0001<18>
+                                                       Msub_out_sub0001_cy<18>
+                                                       Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.COUT    Tbyp                  0.128   out_sub0001<20>
+                                                       Msub_out_sub0001_cy<20>
+                                                       Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.COUT    Tbyp                  0.128   out_sub0001<22>
+                                                       Msub_out_sub0001_cy<22>
+                                                       Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.COUT    Tbyp                  0.128   out_sub0001<24>
+                                                       Msub_out_sub0001_cy<24>
+                                                       Msub_out_sub0001_cy<25>
+    SLICE_X15Y43.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<25>
+    SLICE_X15Y43.COUT    Tbyp                  0.128   out_sub0001<26>
+                                                       Msub_out_sub0001_cy<26>
+                                                       Msub_out_sub0001_cy<27>
+    SLICE_X15Y44.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<27>
+    SLICE_X15Y44.COUT    Tbyp                  0.128   out_sub0001<28>
+                                                       Msub_out_sub0001_cy<28>
+                                                       Msub_out_sub0001_cy<29>
+    SLICE_X15Y45.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<29>
+    SLICE_X15Y45.Y       Tciny                 0.923   out_sub0001<30>
+                                                       Msub_out_sub0001_cy<30>
+                                                       Msub_out_sub0001_xor<31>
+    SLICE_X13Y40.G2      net (fanout=1)        0.822   out_sub0001<31>
+    SLICE_X13Y40.Y       Tilo                  0.551   out_31_OBUF
+                                                       out<31>86
+    SLICE_X13Y40.F3      net (fanout=1)        0.015   out<31>86
+    SLICE_X13Y40.X       Tilo                  0.551   out_31_OBUF
+                                                       out<31>119
+    L4.O1                net (fanout=2)        4.518   out_31_OBUF
+    L4.PAD               Tioop                 4.362   out<31>
+                                                       out_31_OBUF
+                                                       out<31>
+    -------------------------------------------------  ---------------------------
+    Total                                     19.786ns (10.750ns logic, 9.036ns route)
+                                                       (54.3% logic, 45.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point zero (F3.PAD), 3680 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.395ns (requirement - data path)
+  Source:               A<5> (PAD)
+  Destination:          zero (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      19.605ns (Levels of Logic = 19)
+
+  Maximum Data Path: A<5> to zero
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F15.I                Tiopi                 1.938   A<5>
+                                                       A<5>
+                                                       A_5_IBUF
+    SLICE_X15Y32.G1      net (fanout=4)        3.681   A_5_IBUF
+    SLICE_X15Y32.COUT    Topcyg                1.039   out_sub0001<4>
+                                                       Msub_out_sub0001_lut<5>
+                                                       Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.COUT    Tbyp                  0.128   out_sub0001<6>
+                                                       Msub_out_sub0001_cy<6>
+                                                       Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.COUT    Tbyp                  0.128   out_sub0001<8>
+                                                       Msub_out_sub0001_cy<8>
+                                                       Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.COUT    Tbyp                  0.128   out_sub0001<10>
+                                                       Msub_out_sub0001_cy<10>
+                                                       Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.COUT    Tbyp                  0.128   out_sub0001<12>
+                                                       Msub_out_sub0001_cy<12>
+                                                       Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.COUT    Tbyp                  0.128   out_sub0001<14>
+                                                       Msub_out_sub0001_cy<14>
+                                                       Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.COUT    Tbyp                  0.128   out_sub0001<16>
+                                                       Msub_out_sub0001_cy<16>
+                                                       Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.COUT    Tbyp                  0.128   out_sub0001<18>
+                                                       Msub_out_sub0001_cy<18>
+                                                       Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.COUT    Tbyp                  0.128   out_sub0001<20>
+                                                       Msub_out_sub0001_cy<20>
+                                                       Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.COUT    Tbyp                  0.128   out_sub0001<22>
+                                                       Msub_out_sub0001_cy<22>
+                                                       Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.Y       Tciny                 0.923   out_sub0001<24>
+                                                       Msub_out_sub0001_cy<24>
+                                                       Msub_out_sub0001_xor<25>
+    SLICE_X11Y43.G3      net (fanout=1)        1.427   out_sub0001<25>
+    SLICE_X11Y43.Y       Tilo                  0.551   out_25_OBUF
+                                                       out<25>86
+    SLICE_X11Y43.F4      net (fanout=1)        0.015   out<25>86
+    SLICE_X11Y43.X       Tilo                  0.551   out_25_OBUF
+                                                       out<25>119
+    SLICE_X9Y32.G2       net (fanout=2)        1.171   out_25_OBUF
+    SLICE_X9Y32.COUT     Topcyg                1.039   zero_wg_cy<1>
+                                                       zero_wg_lut<1>
+                                                       zero_wg_cy<1>
+    SLICE_X9Y33.CIN      net (fanout=1)        0.000   zero_wg_cy<1>
+    SLICE_X9Y33.COUT     Tbyp                  0.128   zero_wg_cy<3>
+                                                       zero_wg_cy<2>
+                                                       zero_wg_cy<3>
+    SLICE_X9Y34.CIN      net (fanout=1)        0.000   zero_wg_cy<3>
+    SLICE_X9Y34.COUT     Tbyp                  0.128   zero_wg_cy<5>
+                                                       zero_wg_cy<4>
+                                                       zero_wg_cy<5>
+    SLICE_X9Y35.CIN      net (fanout=1)        0.000   zero_wg_cy<5>
+    SLICE_X9Y35.COUT     Tbyp                  0.128   zero_OBUF
+                                                       zero_wg_cy<6>
+                                                       zero_wg_cy<7>
+    F3.O1                net (fanout=1)        1.372   zero_OBUF
+    F3.PAD               Tioop                 4.362   zero
+                                                       zero_OBUF
+                                                       zero
+    -------------------------------------------------  ---------------------------
+    Total                                     19.605ns (11.939ns logic, 7.666ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.462ns (requirement - data path)
+  Source:               A<5> (PAD)
+  Destination:          zero (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      19.538ns (Levels of Logic = 19)
+
+  Maximum Data Path: A<5> to zero
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F15.I                Tiopi                 1.938   A<5>
+                                                       A<5>
+                                                       A_5_IBUF
+    SLICE_X15Y32.G1      net (fanout=4)        3.681   A_5_IBUF
+    SLICE_X15Y32.COUT    Topcyg                1.039   out_sub0001<4>
+                                                       Msub_out_sub0001_lut<5>
+                                                       Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.COUT    Tbyp                  0.128   out_sub0001<6>
+                                                       Msub_out_sub0001_cy<6>
+                                                       Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.COUT    Tbyp                  0.128   out_sub0001<8>
+                                                       Msub_out_sub0001_cy<8>
+                                                       Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.COUT    Tbyp                  0.128   out_sub0001<10>
+                                                       Msub_out_sub0001_cy<10>
+                                                       Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.COUT    Tbyp                  0.128   out_sub0001<12>
+                                                       Msub_out_sub0001_cy<12>
+                                                       Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.COUT    Tbyp                  0.128   out_sub0001<14>
+                                                       Msub_out_sub0001_cy<14>
+                                                       Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.COUT    Tbyp                  0.128   out_sub0001<16>
+                                                       Msub_out_sub0001_cy<16>
+                                                       Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.COUT    Tbyp                  0.128   out_sub0001<18>
+                                                       Msub_out_sub0001_cy<18>
+                                                       Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.COUT    Tbyp                  0.128   out_sub0001<20>
+                                                       Msub_out_sub0001_cy<20>
+                                                       Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.COUT    Tbyp                  0.128   out_sub0001<22>
+                                                       Msub_out_sub0001_cy<22>
+                                                       Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.COUT    Tbyp                  0.128   out_sub0001<24>
+                                                       Msub_out_sub0001_cy<24>
+                                                       Msub_out_sub0001_cy<25>
+    SLICE_X15Y43.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<25>
+    SLICE_X15Y43.COUT    Tbyp                  0.128   out_sub0001<26>
+                                                       Msub_out_sub0001_cy<26>
+                                                       Msub_out_sub0001_cy<27>
+    SLICE_X15Y44.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<27>
+    SLICE_X15Y44.Y       Tciny                 0.923   out_sub0001<28>
+                                                       Msub_out_sub0001_cy<28>
+                                                       Msub_out_sub0001_xor<29>
+    SLICE_X17Y40.G3      net (fanout=1)        0.747   out_sub0001<29>
+    SLICE_X17Y40.Y       Tilo                  0.551   out_29_OBUF
+                                                       out<29>86
+    SLICE_X17Y40.F3      net (fanout=1)        0.015   out<29>86
+    SLICE_X17Y40.X       Tilo                  0.551   out_29_OBUF
+                                                       out<29>119
+    SLICE_X9Y34.G3       net (fanout=2)        1.784   out_29_OBUF
+    SLICE_X9Y34.COUT     Topcyg                1.039   zero_wg_cy<5>
+                                                       zero_wg_lut<5>
+                                                       zero_wg_cy<5>
+    SLICE_X9Y35.CIN      net (fanout=1)        0.000   zero_wg_cy<5>
+    SLICE_X9Y35.COUT     Tbyp                  0.128   zero_OBUF
+                                                       zero_wg_cy<6>
+                                                       zero_wg_cy<7>
+    F3.O1                net (fanout=1)        1.372   zero_OBUF
+    F3.PAD               Tioop                 4.362   zero
+                                                       zero_OBUF
+                                                       zero
+    -------------------------------------------------  ---------------------------
+    Total                                     19.538ns (11.939ns logic, 7.599ns route)
+                                                       (61.1% logic, 38.9% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.545ns (requirement - data path)
+  Source:               A<5> (PAD)
+  Destination:          zero (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      19.455ns (Levels of Logic = 19)
+
+  Maximum Data Path: A<5> to zero
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F15.I                Tiopi                 1.938   A<5>
+                                                       A<5>
+                                                       A_5_IBUF
+    SLICE_X15Y32.G1      net (fanout=4)        3.681   A_5_IBUF
+    SLICE_X15Y32.COUT    Topcyg                0.889   out_sub0001<4>
+                                                       Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.COUT    Tbyp                  0.128   out_sub0001<6>
+                                                       Msub_out_sub0001_cy<6>
+                                                       Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.COUT    Tbyp                  0.128   out_sub0001<8>
+                                                       Msub_out_sub0001_cy<8>
+                                                       Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.COUT    Tbyp                  0.128   out_sub0001<10>
+                                                       Msub_out_sub0001_cy<10>
+                                                       Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.COUT    Tbyp                  0.128   out_sub0001<12>
+                                                       Msub_out_sub0001_cy<12>
+                                                       Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<13>
+    SLICE_X15Y37.COUT    Tbyp                  0.128   out_sub0001<14>
+                                                       Msub_out_sub0001_cy<14>
+                                                       Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<15>
+    SLICE_X15Y38.COUT    Tbyp                  0.128   out_sub0001<16>
+                                                       Msub_out_sub0001_cy<16>
+                                                       Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<17>
+    SLICE_X15Y39.COUT    Tbyp                  0.128   out_sub0001<18>
+                                                       Msub_out_sub0001_cy<18>
+                                                       Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<19>
+    SLICE_X15Y40.COUT    Tbyp                  0.128   out_sub0001<20>
+                                                       Msub_out_sub0001_cy<20>
+                                                       Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<21>
+    SLICE_X15Y41.COUT    Tbyp                  0.128   out_sub0001<22>
+                                                       Msub_out_sub0001_cy<22>
+                                                       Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<23>
+    SLICE_X15Y42.Y       Tciny                 0.923   out_sub0001<24>
+                                                       Msub_out_sub0001_cy<24>
+                                                       Msub_out_sub0001_xor<25>
+    SLICE_X11Y43.G3      net (fanout=1)        1.427   out_sub0001<25>
+    SLICE_X11Y43.Y       Tilo                  0.551   out_25_OBUF
+                                                       out<25>86
+    SLICE_X11Y43.F4      net (fanout=1)        0.015   out<25>86
+    SLICE_X11Y43.X       Tilo                  0.551   out_25_OBUF
+                                                       out<25>119
+    SLICE_X9Y32.G2       net (fanout=2)        1.171   out_25_OBUF
+    SLICE_X9Y32.COUT     Topcyg                1.039   zero_wg_cy<1>
+                                                       zero_wg_lut<1>
+                                                       zero_wg_cy<1>
+    SLICE_X9Y33.CIN      net (fanout=1)        0.000   zero_wg_cy<1>
+    SLICE_X9Y33.COUT     Tbyp                  0.128   zero_wg_cy<3>
+                                                       zero_wg_cy<2>
+                                                       zero_wg_cy<3>
+    SLICE_X9Y34.CIN      net (fanout=1)        0.000   zero_wg_cy<3>
+    SLICE_X9Y34.COUT     Tbyp                  0.128   zero_wg_cy<5>
+                                                       zero_wg_cy<4>
+                                                       zero_wg_cy<5>
+    SLICE_X9Y35.CIN      net (fanout=1)        0.000   zero_wg_cy<5>
+    SLICE_X9Y35.COUT     Tbyp                  0.128   zero_OBUF
+                                                       zero_wg_cy<6>
+                                                       zero_wg_cy<7>
+    F3.O1                net (fanout=1)        1.372   zero_OBUF
+    F3.PAD               Tioop                 4.362   zero
+                                                       zero_OBUF
+                                                       zero
+    -------------------------------------------------  ---------------------------
+    Total                                     19.455ns (11.789ns logic, 7.666ns route)
+                                                       (60.6% logic, 39.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point out<12> (N1.PAD), 94 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  1.004ns (requirement - data path)
+  Source:               A<5> (PAD)
+  Destination:          out<12> (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      18.996ns (Levels of Logic = 9)
+
+  Maximum Data Path: A<5> to out<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F15.I                Tiopi                 1.938   A<5>
+                                                       A<5>
+                                                       A_5_IBUF
+    SLICE_X15Y32.G1      net (fanout=4)        3.681   A_5_IBUF
+    SLICE_X15Y32.COUT    Topcyg                1.039   out_sub0001<4>
+                                                       Msub_out_sub0001_lut<5>
+                                                       Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.COUT    Tbyp                  0.128   out_sub0001<6>
+                                                       Msub_out_sub0001_cy<6>
+                                                       Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.COUT    Tbyp                  0.128   out_sub0001<8>
+                                                       Msub_out_sub0001_cy<8>
+                                                       Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.COUT    Tbyp                  0.128   out_sub0001<10>
+                                                       Msub_out_sub0001_cy<10>
+                                                       Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.X       Tcinx                 0.904   out_sub0001<12>
+                                                       Msub_out_sub0001_xor<12>
+    SLICE_X16Y37.G2      net (fanout=1)        0.587   out_sub0001<12>
+    SLICE_X16Y37.Y       Tilo                  0.608   out_12_OBUF
+                                                       out<12>86
+    SLICE_X16Y37.F3      net (fanout=1)        0.015   out<12>86
+    SLICE_X16Y37.X       Tilo                  0.608   out_12_OBUF
+                                                       out<12>119
+    N1.O1                net (fanout=2)        4.870   out_12_OBUF
+    N1.PAD               Tioop                 4.362   out<12>
+                                                       out_12_OBUF
+                                                       out<12>
+    -------------------------------------------------  ---------------------------
+    Total                                     18.996ns (9.843ns logic, 9.153ns route)
+                                                       (51.8% logic, 48.2% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  1.154ns (requirement - data path)
+  Source:               A<5> (PAD)
+  Destination:          out<12> (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      18.846ns (Levels of Logic = 9)
+
+  Maximum Data Path: A<5> to out<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F15.I                Tiopi                 1.938   A<5>
+                                                       A<5>
+                                                       A_5_IBUF
+    SLICE_X15Y32.G1      net (fanout=4)        3.681   A_5_IBUF
+    SLICE_X15Y32.COUT    Topcyg                0.889   out_sub0001<4>
+                                                       Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<5>
+    SLICE_X15Y33.COUT    Tbyp                  0.128   out_sub0001<6>
+                                                       Msub_out_sub0001_cy<6>
+                                                       Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<7>
+    SLICE_X15Y34.COUT    Tbyp                  0.128   out_sub0001<8>
+                                                       Msub_out_sub0001_cy<8>
+                                                       Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<9>
+    SLICE_X15Y35.COUT    Tbyp                  0.128   out_sub0001<10>
+                                                       Msub_out_sub0001_cy<10>
+                                                       Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.CIN     net (fanout=1)        0.000   Msub_out_sub0001_cy<11>
+    SLICE_X15Y36.X       Tcinx                 0.904   out_sub0001<12>
+                                                       Msub_out_sub0001_xor<12>
+    SLICE_X16Y37.G2      net (fanout=1)        0.587   out_sub0001<12>
+    SLICE_X16Y37.Y       Tilo                  0.608   out_12_OBUF
+                                                       out<12>86
+    SLICE_X16Y37.F3      net (fanout=1)        0.015   out<12>86
+    SLICE_X16Y37.X       Tilo                  0.608   out_12_OBUF
+                                                       out<12>119
+    N1.O1                net (fanout=2)        4.870   out_12_OBUF
+    N1.PAD               Tioop                 4.362   out<12>
+                                                       out_12_OBUF
+                                                       out<12>
+    -------------------------------------------------  ---------------------------
+    Total                                     18.846ns (9.693ns logic, 9.153ns route)
+                                                       (51.4% logic, 48.6% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  1.404ns (requirement - data path)
+  Source:               AluOP<0> (PAD)
+  Destination:          out<12> (PAD)
+  Requirement:          20.000ns
+  Data Path Delay:      18.596ns (Levels of Logic = 5)
+
+  Maximum Data Path: AluOP<0> to out<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    R7.I                 Tiopi                 1.938   AluOP<0>
+                                                       AluOP<0>
+                                                       AluOP_0_IBUF
+    SLICE_X12Y30.G1      net (fanout=97)       3.379   AluOP_0_IBUF
+    SLICE_X12Y30.Y       Tilo                  0.608   N65
+                                                       out_cmp_eq00001
+    SLICE_X16Y38.F2      net (fanout=32)       1.706   out_cmp_eq0000
+    SLICE_X16Y38.X       Tilo                  0.608   out<12>16
+                                                       out<12>16
+    SLICE_X16Y37.F2      net (fanout=1)        0.517   out<12>16
+    SLICE_X16Y37.X       Tilo                  0.608   out_12_OBUF
+                                                       out<12>119
+    N1.O1                net (fanout=2)        4.870   out_12_OBUF
+    N1.PAD               Tioop                 4.362   out<12>
+                                                       out_12_OBUF
+                                                       out<12>
+    -------------------------------------------------  ---------------------------
+    Total                                     18.596ns (8.124ns logic, 10.472ns route)
+                                                       (43.7% logic, 56.3% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TS_ALU = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "PADS" 20 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point out<5> (G1.PAD), 52 paths
+--------------------------------------------------------------------------------
+Delay (hold path):      9.147ns (data path)
+  Source:               AluOP<1> (PAD)
+  Destination:          out<5> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      9.147ns (Levels of Logic = 3)
+
+  Minimum Data Path: AluOP<1> to out<5>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    A12.I                Tiopi                 1.550   AluOP<1>
+                                                       AluOP<1>
+                                                       AluOP_1_IBUF
+    SLICE_X27Y34.F2      net (fanout=34)       1.207   AluOP_1_IBUF
+    SLICE_X27Y34.X       Tilo                  0.441   out_5_OBUF
+                                                       out<5>119
+    G1.O1                net (fanout=2)        1.879   out_5_OBUF
+    G1.PAD               Tioop                 4.070   out<5>
+                                                       out_5_OBUF
+                                                       out<5>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.147ns (6.061ns logic, 3.086ns route)
+                                                       (66.3% logic, 33.7% route)
+
+--------------------------------------------------------------------------------
+Delay (hold path):      10.345ns (data path)
+  Source:               B<5> (PAD)
+  Destination:          out<5> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      10.345ns (Levels of Logic = 5)
+
+  Minimum Data Path: B<5> to out<5>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B12.I                Tiopi                 1.550   B<5>
+                                                       B<5>
+                                                       B_5_IBUF
+    SLICE_X26Y34.G2      net (fanout=4)        1.122   B_5_IBUF
+    SLICE_X26Y34.Y       Tilo                  0.486   out<5>16
+                                                       out<5>8
+    SLICE_X26Y34.F3      net (fanout=1)        0.299   out<5>8
+    SLICE_X26Y34.X       Tilo                  0.486   out<5>16
+                                                       out<5>16
+    SLICE_X27Y34.F4      net (fanout=1)        0.012   out<5>16
+    SLICE_X27Y34.X       Tilo                  0.441   out_5_OBUF
+                                                       out<5>119
+    G1.O1                net (fanout=2)        1.879   out_5_OBUF
+    G1.PAD               Tioop                 4.070   out<5>
+                                                       out_5_OBUF
+                                                       out<5>
+    -------------------------------------------------  ---------------------------
+    Total                                     10.345ns (7.033ns logic, 3.312ns route)
+                                                       (68.0% logic, 32.0% route)
+
+--------------------------------------------------------------------------------
+Delay (hold path):      10.697ns (data path)
+  Source:               A<5> (PAD)
+  Destination:          out<5> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      10.697ns (Levels of Logic = 5)
+
+  Minimum Data Path: A<5> to out<5>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F15.I                Tiopi                 1.550   A<5>
+                                                       A<5>
+                                                       A_5_IBUF
+    SLICE_X26Y34.G1      net (fanout=4)        1.474   A_5_IBUF
+    SLICE_X26Y34.Y       Tilo                  0.486   out<5>16
+                                                       out<5>8
+    SLICE_X26Y34.F3      net (fanout=1)        0.299   out<5>8
+    SLICE_X26Y34.X       Tilo                  0.486   out<5>16
+                                                       out<5>16
+    SLICE_X27Y34.F4      net (fanout=1)        0.012   out<5>16
+    SLICE_X27Y34.X       Tilo                  0.441   out_5_OBUF
+                                                       out<5>119
+    G1.O1                net (fanout=2)        1.879   out_5_OBUF
+    G1.PAD               Tioop                 4.070   out<5>
+                                                       out_5_OBUF
+                                                       out<5>
+    -------------------------------------------------  ---------------------------
+    Total                                     10.697ns (7.033ns logic, 3.664ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point out<18> (F2.PAD), 130 paths
+--------------------------------------------------------------------------------
+Delay (hold path):      9.316ns (data path)
+  Source:               A<18> (PAD)
+  Destination:          out<18> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      9.316ns (Levels of Logic = 5)
+
+  Minimum Data Path: A<18> to out<18>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B6.I                 Tiopi                 1.550   A<18>
+                                                       A<18>
+                                                       A_18_IBUF
+    SLICE_X10Y38.F4      net (fanout=4)        0.642   A_18_IBUF
+    SLICE_X10Y38.X       Tilo                  0.486   out<18>82
+                                                       out<18>82
+    SLICE_X10Y39.G1      net (fanout=1)        0.195   out<18>82
+    SLICE_X10Y39.Y       Tilo                  0.486   out_18_OBUF
+                                                       out<18>86
+    SLICE_X10Y39.F3      net (fanout=1)        0.012   out<18>86
+    SLICE_X10Y39.X       Tilo                  0.486   out_18_OBUF
+                                                       out<18>119
+    F2.O1                net (fanout=2)        1.389   out_18_OBUF
+    F2.PAD               Tioop                 4.070   out<18>
+                                                       out_18_OBUF
+                                                       out<18>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.316ns (7.078ns logic, 2.238ns route)
+                                                       (76.0% logic, 24.0% route)
+
+--------------------------------------------------------------------------------
+Delay (hold path):      9.757ns (data path)
+  Source:               AluOP<1> (PAD)
+  Destination:          out<18> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      9.757ns (Levels of Logic = 3)
+
+  Minimum Data Path: AluOP<1> to out<18>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    A12.I                Tiopi                 1.550   AluOP<1>
+                                                       AluOP<1>
+                                                       AluOP_1_IBUF
+    SLICE_X10Y39.F1      net (fanout=34)       2.262   AluOP_1_IBUF
+    SLICE_X10Y39.X       Tilo                  0.486   out_18_OBUF
+                                                       out<18>119
+    F2.O1                net (fanout=2)        1.389   out_18_OBUF
+    F2.PAD               Tioop                 4.070   out<18>
+                                                       out_18_OBUF
+                                                       out<18>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.757ns (6.106ns logic, 3.651ns route)
+                                                       (62.6% logic, 37.4% route)
+
+--------------------------------------------------------------------------------
+Delay (hold path):      9.975ns (data path)
+  Source:               AluOP<2> (PAD)
+  Destination:          out<18> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      9.975ns (Levels of Logic = 4)
+
+  Minimum Data Path: AluOP<2> to out<18>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    N2.I                 Tiopi                 1.550   AluOP<2>
+                                                       AluOP<2>
+                                                       AluOP_2_IBUF
+    SLICE_X10Y39.G3      net (fanout=35)       1.982   AluOP_2_IBUF
+    SLICE_X10Y39.Y       Tilo                  0.486   out_18_OBUF
+                                                       out<18>86
+    SLICE_X10Y39.F3      net (fanout=1)        0.012   out<18>86
+    SLICE_X10Y39.X       Tilo                  0.486   out_18_OBUF
+                                                       out<18>119
+    F2.O1                net (fanout=2)        1.389   out_18_OBUF
+    F2.PAD               Tioop                 4.070   out<18>
+                                                       out_18_OBUF
+                                                       out<18>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.975ns (6.592ns logic, 3.383ns route)
+                                                       (66.1% logic, 33.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point out<17> (H4.PAD), 124 paths
+--------------------------------------------------------------------------------
+Delay (hold path):      9.389ns (data path)
+  Source:               B<17> (PAD)
+  Destination:          out<17> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      9.389ns (Levels of Logic = 5)
+
+  Minimum Data Path: B<17> to out<17>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G4.I                 Tiopi                 1.550   B<17>
+                                                       B<17>
+                                                       B_17_IBUF
+    SLICE_X9Y37.F3       net (fanout=4)        1.013   B_17_IBUF
+    SLICE_X9Y37.X        Tilo                  0.441   out<17>82
+                                                       out<17>82
+    SLICE_X8Y37.G4       net (fanout=1)        0.074   out<17>82
+    SLICE_X8Y37.Y        Tilo                  0.486   out_17_OBUF
+                                                       out<17>86
+    SLICE_X8Y37.F3       net (fanout=1)        0.012   out<17>86
+    SLICE_X8Y37.X        Tilo                  0.486   out_17_OBUF
+                                                       out<17>119
+    H4.O1                net (fanout=2)        1.257   out_17_OBUF
+    H4.PAD               Tioop                 4.070   out<17>
+                                                       out_17_OBUF
+                                                       out<17>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.389ns (7.033ns logic, 2.356ns route)
+                                                       (74.9% logic, 25.1% route)
+
+--------------------------------------------------------------------------------
+Delay (hold path):      9.617ns (data path)
+  Source:               A<17> (PAD)
+  Destination:          out<17> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      9.617ns (Levels of Logic = 5)
+
+  Minimum Data Path: A<17> to out<17>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H1.I                 Tiopi                 1.550   A<17>
+                                                       A<17>
+                                                       A_17_IBUF
+    SLICE_X9Y37.F4       net (fanout=4)        1.241   A_17_IBUF
+    SLICE_X9Y37.X        Tilo                  0.441   out<17>82
+                                                       out<17>82
+    SLICE_X8Y37.G4       net (fanout=1)        0.074   out<17>82
+    SLICE_X8Y37.Y        Tilo                  0.486   out_17_OBUF
+                                                       out<17>86
+    SLICE_X8Y37.F3       net (fanout=1)        0.012   out<17>86
+    SLICE_X8Y37.X        Tilo                  0.486   out_17_OBUF
+                                                       out<17>119
+    H4.O1                net (fanout=2)        1.257   out_17_OBUF
+    H4.PAD               Tioop                 4.070   out<17>
+                                                       out_17_OBUF
+                                                       out<17>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.617ns (7.033ns logic, 2.584ns route)
+                                                       (73.1% logic, 26.9% route)
+
+--------------------------------------------------------------------------------
+Delay (hold path):      9.987ns (data path)
+  Source:               B<17> (PAD)
+  Destination:          out<17> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      9.987ns (Levels of Logic = 5)
+
+  Minimum Data Path: B<17> to out<17>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G4.I                 Tiopi                 1.550   B<17>
+                                                       B<17>
+                                                       B_17_IBUF
+    SLICE_X8Y38.G2       net (fanout=4)        1.226   B_17_IBUF
+    SLICE_X8Y38.Y        Tilo                  0.486   out<17>16
+                                                       out<17>8
+    SLICE_X8Y38.F4       net (fanout=1)        0.012   out<17>8
+    SLICE_X8Y38.X        Tilo                  0.486   out<17>16
+                                                       out<17>16
+    SLICE_X8Y37.F2       net (fanout=1)        0.414   out<17>16
+    SLICE_X8Y37.X        Tilo                  0.486   out_17_OBUF
+                                                       out<17>119
+    H4.O1                net (fanout=2)        1.257   out_17_OBUF
+    H4.PAD               Tioop                 4.070   out<17>
+                                                       out_17_OBUF
+                                                       out<17>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.987ns (7.078ns logic, 2.909ns route)
+                                                       (70.9% logic, 29.1% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A<0>           |out<0>         |   13.055|
+A<0>           |out<1>         |   13.534|
+A<0>           |out<2>         |   14.293|
+A<0>           |out<3>         |   14.550|
+A<0>           |out<4>         |   14.468|
+A<0>           |out<5>         |   14.979|
+A<0>           |out<6>         |   14.657|
+A<0>           |out<7>         |   14.278|
+A<0>           |out<8>         |   14.804|
+A<0>           |out<9>         |   16.403|
+A<0>           |out<10>        |   16.026|
+A<0>           |out<11>        |   14.908|
+A<0>           |out<12>        |   17.853|
+A<0>           |out<13>        |   17.352|
+A<0>           |out<14>        |   17.593|
+A<0>           |out<15>        |   16.129|
+A<0>           |out<16>        |   15.848|
+A<0>           |out<17>        |   15.456|
+A<0>           |out<18>        |   15.677|
+A<0>           |out<19>        |   15.472|
+A<0>           |out<20>        |   17.402|
+A<0>           |out<21>        |   16.263|
+A<0>           |out<22>        |   17.274|
+A<0>           |out<23>        |   16.823|
+A<0>           |out<24>        |   16.203|
+A<0>           |out<25>        |   16.378|
+A<0>           |out<26>        |   16.670|
+A<0>           |out<27>        |   17.213|
+A<0>           |out<28>        |   17.224|
+A<0>           |out<29>        |   16.935|
+A<0>           |out<30>        |   16.654|
+A<0>           |out<31>        |   19.064|
+A<0>           |zero           |   18.257|
+A<1>           |out<1>         |   13.914|
+A<1>           |out<2>         |   15.152|
+A<1>           |out<3>         |   14.943|
+A<1>           |out<4>         |   15.456|
+A<1>           |out<5>         |   15.753|
+A<1>           |out<6>         |   15.641|
+A<1>           |out<7>         |   15.030|
+A<1>           |out<8>         |   15.486|
+A<1>           |out<9>         |   16.796|
+A<1>           |out<10>        |   16.419|
+A<1>           |out<11>        |   16.022|
+A<1>           |out<12>        |   18.505|
+A<1>           |out<13>        |   18.202|
+A<1>           |out<14>        |   18.328|
+A<1>           |out<15>        |   16.522|
+A<1>           |out<16>        |   16.962|
+A<1>           |out<17>        |   15.849|
+A<1>           |out<18>        |   16.070|
+A<1>           |out<19>        |   16.132|
+A<1>           |out<20>        |   18.367|
+A<1>           |out<21>        |   17.022|
+A<1>           |out<22>        |   18.162|
+A<1>           |out<23>        |   17.216|
+A<1>           |out<24>        |   17.017|
+A<1>           |out<25>        |   17.492|
+A<1>           |out<26>        |   17.724|
+A<1>           |out<27>        |   17.655|
+A<1>           |out<28>        |   17.617|
+A<1>           |out<29>        |   17.728|
+A<1>           |out<30>        |   17.510|
+A<1>           |out<31>        |   19.457|
+A<1>           |zero           |   19.114|
+A<2>           |out<2>         |   13.568|
+A<2>           |out<3>         |   14.196|
+A<2>           |out<4>         |   14.709|
+A<2>           |out<5>         |   15.006|
+A<2>           |out<6>         |   14.894|
+A<2>           |out<7>         |   14.283|
+A<2>           |out<8>         |   14.739|
+A<2>           |out<9>         |   16.274|
+A<2>           |out<10>        |   15.897|
+A<2>           |out<11>        |   15.275|
+A<2>           |out<12>        |   17.758|
+A<2>           |out<13>        |   17.455|
+A<2>           |out<14>        |   17.581|
+A<2>           |out<15>        |   16.000|
+A<2>           |out<16>        |   16.215|
+A<2>           |out<17>        |   15.327|
+A<2>           |out<18>        |   15.548|
+A<2>           |out<19>        |   15.385|
+A<2>           |out<20>        |   17.620|
+A<2>           |out<21>        |   16.275|
+A<2>           |out<22>        |   17.415|
+A<2>           |out<23>        |   16.694|
+A<2>           |out<24>        |   16.270|
+A<2>           |out<25>        |   16.745|
+A<2>           |out<26>        |   16.977|
+A<2>           |out<27>        |   17.084|
+A<2>           |out<28>        |   17.095|
+A<2>           |out<29>        |   16.981|
+A<2>           |out<30>        |   16.763|
+A<2>           |out<31>        |   18.935|
+A<2>           |zero           |   18.367|
+A<3>           |out<3>         |   13.783|
+A<3>           |out<4>         |   14.370|
+A<3>           |out<5>         |   14.881|
+A<3>           |out<6>         |   14.559|
+A<3>           |out<7>         |   14.180|
+A<3>           |out<8>         |   14.706|
+A<3>           |out<9>         |   16.305|
+A<3>           |out<10>        |   15.928|
+A<3>           |out<11>        |   14.562|
+A<3>           |out<12>        |   17.755|
+A<3>           |out<13>        |   17.254|
+A<3>           |out<14>        |   17.495|
+A<3>           |out<15>        |   16.031|
+A<3>           |out<16>        |   15.571|
+A<3>           |out<17>        |   15.358|
+A<3>           |out<18>        |   15.579|
+A<3>           |out<19>        |   15.374|
+A<3>           |out<20>        |   17.304|
+A<3>           |out<21>        |   16.165|
+A<3>           |out<22>        |   17.176|
+A<3>           |out<23>        |   16.725|
+A<3>           |out<24>        |   16.105|
+A<3>           |out<25>        |   16.011|
+A<3>           |out<26>        |   16.572|
+A<3>           |out<27>        |   17.115|
+A<3>           |out<28>        |   17.126|
+A<3>           |out<29>        |   16.837|
+A<3>           |out<30>        |   16.556|
+A<3>           |out<31>        |   18.966|
+A<3>           |zero           |   18.159|
+A<4>           |out<4>         |   14.198|
+A<4>           |out<5>         |   15.259|
+A<4>           |out<6>         |   15.220|
+A<4>           |out<7>         |   14.783|
+A<4>           |out<8>         |   15.309|
+A<4>           |out<9>         |   16.908|
+A<4>           |out<10>        |   16.531|
+A<4>           |out<11>        |   15.601|
+A<4>           |out<12>        |   18.358|
+A<4>           |out<13>        |   17.857|
+A<4>           |out<14>        |   18.098|
+A<4>           |out<15>        |   16.634|
+A<4>           |out<16>        |   16.541|
+A<4>           |out<17>        |   15.961|
+A<4>           |out<18>        |   16.182|
+A<4>           |out<19>        |   15.977|
+A<4>           |out<20>        |   17.946|
+A<4>           |out<21>        |   16.768|
+A<4>           |out<22>        |   17.779|
+A<4>           |out<23>        |   17.328|
+A<4>           |out<24>        |   16.708|
+A<4>           |out<25>        |   17.071|
+A<4>           |out<26>        |   17.303|
+A<4>           |out<27>        |   17.718|
+A<4>           |out<28>        |   17.729|
+A<4>           |out<29>        |   17.440|
+A<4>           |out<30>        |   17.159|
+A<4>           |out<31>        |   19.569|
+A<4>           |zero           |   18.762|
+A<5>           |out<5>         |   15.583|
+A<5>           |out<6>         |   16.132|
+A<5>           |out<7>         |   15.521|
+A<5>           |out<8>         |   15.977|
+A<5>           |out<9>         |   16.110|
+A<5>           |out<10>        |   16.625|
+A<5>           |out<11>        |   16.513|
+A<5>           |out<12>        |   18.996|
+A<5>           |out<13>        |   18.693|
+A<5>           |out<14>        |   18.819|
+A<5>           |out<15>        |   16.874|
+A<5>           |out<16>        |   17.453|
+A<5>           |out<17>        |   16.244|
+A<5>           |out<18>        |   16.262|
+A<5>           |out<19>        |   16.623|
+A<5>           |out<20>        |   18.858|
+A<5>           |out<21>        |   17.513|
+A<5>           |out<22>        |   18.653|
+A<5>           |out<23>        |   17.511|
+A<5>           |out<24>        |   17.508|
+A<5>           |out<25>        |   17.983|
+A<5>           |out<26>        |   18.215|
+A<5>           |out<27>        |   18.146|
+A<5>           |out<28>        |   17.942|
+A<5>           |out<29>        |   18.219|
+A<5>           |out<30>        |   18.001|
+A<5>           |out<31>        |   19.936|
+A<5>           |zero           |   19.605|
+A<6>           |out<6>         |   13.340|
+A<6>           |out<7>         |   13.581|
+A<6>           |out<8>         |   14.332|
+A<6>           |out<9>         |   15.931|
+A<6>           |out<10>        |   15.554|
+A<6>           |out<11>        |   14.556|
+A<6>           |out<12>        |   17.381|
+A<6>           |out<13>        |   16.880|
+A<6>           |out<14>        |   17.121|
+A<6>           |out<15>        |   15.657|
+A<6>           |out<16>        |   15.496|
+A<6>           |out<17>        |   14.984|
+A<6>           |out<18>        |   15.205|
+A<6>           |out<19>        |   15.000|
+A<6>           |out<20>        |   16.930|
+A<6>           |out<21>        |   15.791|
+A<6>           |out<22>        |   16.802|
+A<6>           |out<23>        |   16.351|
+A<6>           |out<24>        |   15.731|
+A<6>           |out<25>        |   16.026|
+A<6>           |out<26>        |   16.258|
+A<6>           |out<27>        |   16.741|
+A<6>           |out<28>        |   16.752|
+A<6>           |out<29>        |   16.463|
+A<6>           |out<30>        |   16.182|
+A<6>           |out<31>        |   18.592|
+A<6>           |zero           |   17.785|
+A<7>           |out<7>         |   13.985|
+A<7>           |out<8>         |   15.102|
+A<7>           |out<9>         |   16.436|
+A<7>           |out<10>        |   16.059|
+A<7>           |out<11>        |   15.638|
+A<7>           |out<12>        |   18.121|
+A<7>           |out<13>        |   17.818|
+A<7>           |out<14>        |   17.944|
+A<7>           |out<15>        |   16.162|
+A<7>           |out<16>        |   16.578|
+A<7>           |out<17>        |   15.489|
+A<7>           |out<18>        |   15.710|
+A<7>           |out<19>        |   15.748|
+A<7>           |out<20>        |   17.983|
+A<7>           |out<21>        |   16.638|
+A<7>           |out<22>        |   17.778|
+A<7>           |out<23>        |   16.856|
+A<7>           |out<24>        |   16.633|
+A<7>           |out<25>        |   17.108|
+A<7>           |out<26>        |   17.340|
+A<7>           |out<27>        |   17.271|
+A<7>           |out<28>        |   17.257|
+A<7>           |out<29>        |   17.344|
+A<7>           |out<30>        |   17.126|
+A<7>           |out<31>        |   19.097|
+A<7>           |zero           |   18.730|
+A<8>           |out<8>         |   14.161|
+A<8>           |out<9>         |   15.175|
+A<8>           |out<10>        |   15.646|
+A<8>           |out<11>        |   15.534|
+A<8>           |out<12>        |   18.017|
+A<8>           |out<13>        |   17.714|
+A<8>           |out<14>        |   17.840|
+A<8>           |out<15>        |   15.895|
+A<8>           |out<16>        |   16.474|
+A<8>           |out<17>        |   15.265|
+A<8>           |out<18>        |   15.283|
+A<8>           |out<19>        |   15.644|
+A<8>           |out<20>        |   17.879|
+A<8>           |out<21>        |   16.534|
+A<8>           |out<22>        |   17.674|
+A<8>           |out<23>        |   16.532|
+A<8>           |out<24>        |   16.529|
+A<8>           |out<25>        |   17.004|
+A<8>           |out<26>        |   17.236|
+A<8>           |out<27>        |   17.167|
+A<8>           |out<28>        |   16.963|
+A<8>           |out<29>        |   17.240|
+A<8>           |out<30>        |   17.022|
+A<8>           |out<31>        |   18.957|
+A<8>           |zero           |   18.626|
+A<9>           |out<9>         |   15.291|
+A<9>           |out<10>        |   15.583|
+A<9>           |out<11>        |   14.502|
+A<9>           |out<12>        |   17.410|
+A<9>           |out<13>        |   16.909|
+A<9>           |out<14>        |   17.150|
+A<9>           |out<15>        |   15.686|
+A<9>           |out<16>        |   15.442|
+A<9>           |out<17>        |   15.013|
+A<9>           |out<18>        |   15.234|
+A<9>           |out<19>        |   15.029|
+A<9>           |out<20>        |   16.959|
+A<9>           |out<21>        |   15.820|
+A<9>           |out<22>        |   16.831|
+A<9>           |out<23>        |   16.380|
+A<9>           |out<24>        |   15.760|
+A<9>           |out<25>        |   15.972|
+A<9>           |out<26>        |   16.227|
+A<9>           |out<27>        |   16.770|
+A<9>           |out<28>        |   16.781|
+A<9>           |out<29>        |   16.492|
+A<9>           |out<30>        |   16.211|
+A<9>           |out<31>        |   18.621|
+A<9>           |zero           |   17.814|
+A<10>          |out<10>        |   14.316|
+A<10>          |out<11>        |   13.570|
+A<10>          |out<12>        |   16.988|
+A<10>          |out<13>        |   16.487|
+A<10>          |out<14>        |   16.728|
+A<10>          |out<15>        |   15.264|
+A<10>          |out<16>        |   14.804|
+A<10>          |out<17>        |   14.591|
+A<10>          |out<18>        |   14.812|
+A<10>          |out<19>        |   14.607|
+A<10>          |out<20>        |   16.537|
+A<10>          |out<21>        |   15.398|
+A<10>          |out<22>        |   16.409|
+A<10>          |out<23>        |   15.958|
+A<10>          |out<24>        |   15.338|
+A<10>          |out<25>        |   15.249|
+A<10>          |out<26>        |   15.805|
+A<10>          |out<27>        |   16.348|
+A<10>          |out<28>        |   16.359|
+A<10>          |out<29>        |   16.070|
+A<10>          |out<30>        |   15.789|
+A<10>          |out<31>        |   18.199|
+A<10>          |zero           |   17.392|
+A<11>          |out<11>        |   13.938|
+A<11>          |out<12>        |   17.329|
+A<11>          |out<13>        |   16.828|
+A<11>          |out<14>        |   17.069|
+A<11>          |out<15>        |   15.605|
+A<11>          |out<16>        |   15.539|
+A<11>          |out<17>        |   14.932|
+A<11>          |out<18>        |   15.153|
+A<11>          |out<19>        |   14.948|
+A<11>          |out<20>        |   16.944|
+A<11>          |out<21>        |   15.739|
+A<11>          |out<22>        |   16.750|
+A<11>          |out<23>        |   16.299|
+A<11>          |out<24>        |   15.679|
+A<11>          |out<25>        |   16.069|
+A<11>          |out<26>        |   16.301|
+A<11>          |out<27>        |   16.689|
+A<11>          |out<28>        |   16.700|
+A<11>          |out<29>        |   16.411|
+A<11>          |out<30>        |   16.130|
+A<11>          |out<31>        |   18.540|
+A<11>          |zero           |   17.733|
+A<12>          |out<12>        |   16.371|
+A<12>          |out<13>        |   16.688|
+A<12>          |out<14>        |   17.031|
+A<12>          |out<15>        |   15.447|
+A<12>          |out<16>        |   15.665|
+A<12>          |out<17>        |   14.774|
+A<12>          |out<18>        |   14.995|
+A<12>          |out<19>        |   14.835|
+A<12>          |out<20>        |   17.070|
+A<12>          |out<21>        |   15.725|
+A<12>          |out<22>        |   16.865|
+A<12>          |out<23>        |   16.141|
+A<12>          |out<24>        |   15.720|
+A<12>          |out<25>        |   16.195|
+A<12>          |out<26>        |   16.427|
+A<12>          |out<27>        |   16.531|
+A<12>          |out<28>        |   16.542|
+A<12>          |out<29>        |   16.431|
+A<12>          |out<30>        |   16.213|
+A<12>          |out<31>        |   18.382|
+A<12>          |zero           |   17.817|
+A<13>          |out<13>        |   16.455|
+A<13>          |out<14>        |   17.242|
+A<13>          |out<15>        |   15.509|
+A<13>          |out<16>        |   15.876|
+A<13>          |out<17>        |   14.836|
+A<13>          |out<18>        |   15.057|
+A<13>          |out<19>        |   15.046|
+A<13>          |out<20>        |   17.281|
+A<13>          |out<21>        |   15.936|
+A<13>          |out<22>        |   17.076|
+A<13>          |out<23>        |   16.203|
+A<13>          |out<24>        |   15.931|
+A<13>          |out<25>        |   16.406|
+A<13>          |out<26>        |   16.638|
+A<13>          |out<27>        |   16.593|
+A<13>          |out<28>        |   16.604|
+A<13>          |out<29>        |   16.642|
+A<13>          |out<30>        |   16.424|
+A<13>          |out<31>        |   18.444|
+A<13>          |zero           |   18.028|
+A<14>          |out<14>        |   15.830|
+A<14>          |out<15>        |   14.871|
+A<14>          |out<16>        |   15.301|
+A<14>          |out<17>        |   14.423|
+A<14>          |out<18>        |   14.644|
+A<14>          |out<19>        |   14.471|
+A<14>          |out<20>        |   16.706|
+A<14>          |out<21>        |   15.361|
+A<14>          |out<22>        |   16.501|
+A<14>          |out<23>        |   15.790|
+A<14>          |out<24>        |   15.356|
+A<14>          |out<25>        |   15.831|
+A<14>          |out<26>        |   16.063|
+A<14>          |out<27>        |   16.180|
+A<14>          |out<28>        |   16.191|
+A<14>          |out<29>        |   16.067|
+A<14>          |out<30>        |   15.849|
+A<14>          |out<31>        |   18.031|
+A<14>          |zero           |   17.453|
+A<15>          |out<15>        |   14.724|
+A<15>          |out<16>        |   14.933|
+A<15>          |out<17>        |   14.720|
+A<15>          |out<18>        |   14.941|
+A<15>          |out<19>        |   14.736|
+A<15>          |out<20>        |   16.666|
+A<15>          |out<21>        |   15.527|
+A<15>          |out<22>        |   16.538|
+A<15>          |out<23>        |   16.087|
+A<15>          |out<24>        |   15.467|
+A<15>          |out<25>        |   15.178|
+A<15>          |out<26>        |   15.934|
+A<15>          |out<27>        |   16.477|
+A<15>          |out<28>        |   16.488|
+A<15>          |out<29>        |   16.199|
+A<15>          |out<30>        |   15.918|
+A<15>          |out<31>        |   18.328|
+A<15>          |zero           |   17.521|
+A<16>          |out<16>        |   15.028|
+A<16>          |out<17>        |   15.435|
+A<16>          |out<18>        |   15.881|
+A<16>          |out<19>        |   15.676|
+A<16>          |out<20>        |   17.606|
+A<16>          |out<21>        |   16.467|
+A<16>          |out<22>        |   17.478|
+A<16>          |out<23>        |   17.027|
+A<16>          |out<24>        |   16.407|
+A<16>          |out<25>        |   16.015|
+A<16>          |out<26>        |   16.874|
+A<16>          |out<27>        |   17.417|
+A<16>          |out<28>        |   17.428|
+A<16>          |out<29>        |   17.139|
+A<16>          |out<30>        |   16.858|
+A<16>          |out<31>        |   19.268|
+A<16>          |zero           |   18.461|
+A<17>          |out<17>        |   14.663|
+A<17>          |out<18>        |   15.553|
+A<17>          |out<19>        |   15.348|
+A<17>          |out<20>        |   17.278|
+A<17>          |out<21>        |   16.139|
+A<17>          |out<22>        |   17.150|
+A<17>          |out<23>        |   16.699|
+A<17>          |out<24>        |   16.079|
+A<17>          |out<25>        |   16.251|
+A<17>          |out<26>        |   16.546|
+A<17>          |out<27>        |   17.089|
+A<17>          |out<28>        |   17.100|
+A<17>          |out<29>        |   16.811|
+A<17>          |out<30>        |   16.530|
+A<17>          |out<31>        |   18.940|
+A<17>          |zero           |   18.133|
+A<18>          |out<18>        |   13.257|
+A<18>          |out<19>        |   14.238|
+A<18>          |out<20>        |   16.690|
+A<18>          |out<21>        |   15.345|
+A<18>          |out<22>        |   16.485|
+A<18>          |out<23>        |   15.343|
+A<18>          |out<24>        |   15.340|
+A<18>          |out<25>        |   15.815|
+A<18>          |out<26>        |   16.047|
+A<18>          |out<27>        |   15.978|
+A<18>          |out<28>        |   15.774|
+A<18>          |out<29>        |   16.051|
+A<18>          |out<30>        |   15.833|
+A<18>          |out<31>        |   17.768|
+A<18>          |zero           |   17.437|
+A<19>          |out<19>        |   14.706|
+A<19>          |out<20>        |   17.305|
+A<19>          |out<21>        |   16.166|
+A<19>          |out<22>        |   17.177|
+A<19>          |out<23>        |   16.726|
+A<19>          |out<24>        |   16.106|
+A<19>          |out<25>        |   15.714|
+A<19>          |out<26>        |   16.573|
+A<19>          |out<27>        |   17.116|
+A<19>          |out<28>        |   17.127|
+A<19>          |out<29>        |   16.838|
+A<19>          |out<30>        |   16.557|
+A<19>          |out<31>        |   18.967|
+A<19>          |zero           |   18.160|
+A<20>          |out<20>        |   15.736|
+A<20>          |out<21>        |   15.011|
+A<20>          |out<22>        |   16.368|
+A<20>          |out<23>        |   15.226|
+A<20>          |out<24>        |   15.223|
+A<20>          |out<25>        |   15.698|
+A<20>          |out<26>        |   15.930|
+A<20>          |out<27>        |   15.861|
+A<20>          |out<28>        |   15.657|
+A<20>          |out<29>        |   15.934|
+A<20>          |out<30>        |   15.716|
+A<20>          |out<31>        |   17.651|
+A<20>          |zero           |   17.320|
+A<21>          |out<21>        |   14.631|
+A<21>          |out<22>        |   16.311|
+A<21>          |out<23>        |   15.860|
+A<21>          |out<24>        |   15.240|
+A<21>          |out<25>        |   15.262|
+A<21>          |out<26>        |   15.707|
+A<21>          |out<27>        |   16.250|
+A<21>          |out<28>        |   16.261|
+A<21>          |out<29>        |   15.972|
+A<21>          |out<30>        |   15.691|
+A<21>          |out<31>        |   18.101|
+A<21>          |zero           |   17.294|
+A<22>          |out<22>        |   15.144|
+A<22>          |out<23>        |   14.829|
+A<22>          |out<24>        |   14.836|
+A<22>          |out<25>        |   15.311|
+A<22>          |out<26>        |   15.543|
+A<22>          |out<27>        |   15.474|
+A<22>          |out<28>        |   15.455|
+A<22>          |out<29>        |   15.547|
+A<22>          |out<30>        |   15.329|
+A<22>          |out<31>        |   17.295|
+A<22>          |zero           |   16.933|
+A<23>          |out<23>        |   14.596|
+A<23>          |out<24>        |   15.254|
+A<23>          |out<25>        |   15.729|
+A<23>          |out<26>        |   15.961|
+A<23>          |out<27>        |   15.892|
+A<23>          |out<28>        |   15.688|
+A<23>          |out<29>        |   15.965|
+A<23>          |out<30>        |   15.747|
+A<23>          |out<31>        |   17.682|
+A<23>          |zero           |   17.351|
+A<24>          |out<24>        |   13.113|
+A<24>          |out<25>        |   14.020|
+A<24>          |out<26>        |   14.469|
+A<24>          |out<27>        |   14.641|
+A<24>          |out<28>        |   14.652|
+A<24>          |out<29>        |   14.473|
+A<24>          |out<30>        |   14.255|
+A<24>          |out<31>        |   16.492|
+A<24>          |zero           |   15.792|
+A<25>          |out<25>        |   14.529|
+A<25>          |out<26>        |   15.422|
+A<25>          |out<27>        |   15.353|
+A<25>          |out<28>        |   15.354|
+A<25>          |out<29>        |   15.426|
+A<25>          |out<30>        |   15.208|
+A<25>          |out<31>        |   17.194|
+A<25>          |zero           |   16.745|
+A<26>          |out<26>        |   14.231|
+A<26>          |out<27>        |   14.782|
+A<26>          |out<28>        |   14.795|
+A<26>          |out<29>        |   15.072|
+A<26>          |out<30>        |   14.854|
+A<26>          |out<31>        |   16.789|
+A<26>          |zero           |   16.391|
+A<27>          |out<27>        |   15.091|
+A<27>          |out<28>        |   15.771|
+A<27>          |out<29>        |   15.482|
+A<27>          |out<30>        |   15.201|
+A<27>          |out<31>        |   17.611|
+A<27>          |zero           |   16.801|
+A<28>          |out<28>        |   15.135|
+A<28>          |out<29>        |   15.466|
+A<28>          |out<30>        |   15.410|
+A<28>          |out<31>        |   17.820|
+A<28>          |zero           |   16.785|
+A<29>          |out<29>        |   13.887|
+A<29>          |out<30>        |   14.275|
+A<29>          |out<31>        |   16.685|
+A<29>          |zero           |   15.620|
+A<30>          |out<30>        |   13.209|
+A<30>          |out<31>        |   16.239|
+A<30>          |zero           |   15.174|
+A<31>          |out<31>        |   15.837|
+A<31>          |zero           |   14.772|
+AluOP<0>       |out<0>         |   14.943|
+AluOP<0>       |out<1>         |   13.585|
+AluOP<0>       |out<2>         |   14.223|
+AluOP<0>       |out<3>         |   14.739|
+AluOP<0>       |out<4>         |   14.264|
+AluOP<0>       |out<5>         |   15.739|
+AluOP<0>       |out<6>         |   14.707|
+AluOP<0>       |out<7>         |   13.844|
+AluOP<0>       |out<8>         |   15.654|
+AluOP<0>       |out<9>         |   16.219|
+AluOP<0>       |out<10>        |   16.564|
+AluOP<0>       |out<11>        |   14.989|
+AluOP<0>       |out<12>        |   18.596|
+AluOP<0>       |out<13>        |   17.723|
+AluOP<0>       |out<14>        |   18.075|
+AluOP<0>       |out<15>        |   15.674|
+AluOP<0>       |out<16>        |   15.481|
+AluOP<0>       |out<17>        |   15.306|
+AluOP<0>       |out<18>        |   16.271|
+AluOP<0>       |out<19>        |   14.953|
+AluOP<0>       |out<20>        |   17.325|
+AluOP<0>       |out<21>        |   16.936|
+AluOP<0>       |out<22>        |   17.413|
+AluOP<0>       |out<23>        |   15.389|
+AluOP<0>       |out<24>        |   15.246|
+AluOP<0>       |out<25>        |   16.213|
+AluOP<0>       |out<26>        |   16.946|
+AluOP<0>       |out<27>        |   16.648|
+AluOP<0>       |out<28>        |   16.541|
+AluOP<0>       |out<29>        |   16.864|
+AluOP<0>       |out<30>        |   15.914|
+AluOP<0>       |out<31>        |   18.118|
+AluOP<0>       |zero           |   18.426|
+AluOP<1>       |out<0>         |   14.005|
+AluOP<1>       |out<1>         |   12.762|
+AluOP<1>       |out<2>         |   13.888|
+AluOP<1>       |out<3>         |   13.753|
+AluOP<1>       |out<4>         |   13.879|
+AluOP<1>       |out<5>         |   14.753|
+AluOP<1>       |out<6>         |   14.264|
+AluOP<1>       |out<7>         |   12.867|
+AluOP<1>       |out<8>         |   14.849|
+AluOP<1>       |out<9>         |   15.291|
+AluOP<1>       |out<10>        |   15.759|
+AluOP<1>       |out<11>        |   14.140|
+AluOP<1>       |out<12>        |   17.610|
+AluOP<1>       |out<13>        |   17.809|
+AluOP<1>       |out<14>        |   17.089|
+AluOP<1>       |out<15>        |   14.825|
+AluOP<1>       |out<16>        |   15.751|
+AluOP<1>       |out<17>        |   14.320|
+AluOP<1>       |out<18>        |   15.285|
+AluOP<1>       |out<19>        |   15.569|
+AluOP<1>       |out<20>        |   16.880|
+AluOP<1>       |out<21>        |   15.950|
+AluOP<1>       |out<22>        |   17.156|
+AluOP<1>       |out<23>        |   14.403|
+AluOP<1>       |out<24>        |   14.457|
+AluOP<1>       |out<25>        |   15.953|
+AluOP<1>       |out<26>        |   15.961|
+AluOP<1>       |out<27>        |   16.206|
+AluOP<1>       |out<28>        |   16.119|
+AluOP<1>       |out<29>        |   16.429|
+AluOP<1>       |out<30>        |   15.841|
+AluOP<1>       |out<31>        |   17.748|
+AluOP<1>       |zero           |   17.794|
+AluOP<2>       |out<0>         |   14.996|
+AluOP<2>       |out<1>         |   14.493|
+AluOP<2>       |out<2>         |   15.343|
+AluOP<2>       |out<3>         |   14.665|
+AluOP<2>       |out<4>         |   15.363|
+AluOP<2>       |out<5>         |   15.463|
+AluOP<2>       |out<6>         |   15.755|
+AluOP<2>       |out<7>         |   14.563|
+AluOP<2>       |out<8>         |   15.426|
+AluOP<2>       |out<9>         |   15.640|
+AluOP<2>       |out<10>        |   15.993|
+AluOP<2>       |out<11>        |   15.508|
+AluOP<2>       |out<12>        |   18.579|
+AluOP<2>       |out<13>        |   18.169|
+AluOP<2>       |out<14>        |   17.738|
+AluOP<2>       |out<15>        |   15.404|
+AluOP<2>       |out<16>        |   16.107|
+AluOP<2>       |out<17>        |   14.639|
+AluOP<2>       |out<18>        |   15.604|
+AluOP<2>       |out<19>        |   15.803|
+AluOP<2>       |out<20>        |   17.453|
+AluOP<2>       |out<21>        |   16.269|
+AluOP<2>       |out<22>        |   17.402|
+AluOP<2>       |out<23>        |   15.061|
+AluOP<2>       |out<24>        |   16.405|
+AluOP<2>       |out<25>        |   16.187|
+AluOP<2>       |out<26>        |   16.319|
+AluOP<2>       |out<27>        |   16.497|
+AluOP<2>       |out<28>        |   16.353|
+AluOP<2>       |out<29>        |   17.157|
+AluOP<2>       |out<30>        |   16.209|
+AluOP<2>       |out<31>        |   17.982|
+AluOP<2>       |zero           |   18.476|
+AluOP<3>       |out<0>         |   14.525|
+AluOP<3>       |out<1>         |   14.022|
+AluOP<3>       |out<2>         |   14.872|
+AluOP<3>       |out<3>         |   14.194|
+AluOP<3>       |out<4>         |   14.892|
+AluOP<3>       |out<5>         |   14.992|
+AluOP<3>       |out<6>         |   15.284|
+AluOP<3>       |out<7>         |   14.092|
+AluOP<3>       |out<8>         |   14.955|
+AluOP<3>       |out<9>         |   15.169|
+AluOP<3>       |out<10>        |   15.433|
+AluOP<3>       |out<11>        |   15.037|
+AluOP<3>       |out<12>        |   18.108|
+AluOP<3>       |out<13>        |   17.698|
+AluOP<3>       |out<14>        |   17.267|
+AluOP<3>       |out<15>        |   14.933|
+AluOP<3>       |out<16>        |   15.636|
+AluOP<3>       |out<17>        |   14.064|
+AluOP<3>       |out<18>        |   15.029|
+AluOP<3>       |out<19>        |   15.243|
+AluOP<3>       |out<20>        |   16.982|
+AluOP<3>       |out<21>        |   15.694|
+AluOP<3>       |out<22>        |   16.931|
+AluOP<3>       |out<23>        |   14.590|
+AluOP<3>       |out<24>        |   15.934|
+AluOP<3>       |out<25>        |   15.627|
+AluOP<3>       |out<26>        |   15.848|
+AluOP<3>       |out<27>        |   16.026|
+AluOP<3>       |out<28>        |   15.793|
+AluOP<3>       |out<29>        |   16.686|
+AluOP<3>       |out<30>        |   15.738|
+AluOP<3>       |out<31>        |   17.500|
+AluOP<3>       |zero           |   18.005|
+B<0>           |out<0>         |   13.973|
+B<0>           |out<1>         |   14.167|
+B<0>           |out<2>         |   14.956|
+B<0>           |out<3>         |   15.183|
+B<0>           |out<4>         |   15.260|
+B<0>           |out<5>         |   15.612|
+B<0>           |out<6>         |   15.445|
+B<0>           |out<7>         |   14.911|
+B<0>           |out<8>         |   15.437|
+B<0>           |out<9>         |   17.036|
+B<0>           |out<10>        |   16.659|
+B<0>           |out<11>        |   15.826|
+B<0>           |out<12>        |   18.486|
+B<0>           |out<13>        |   18.006|
+B<0>           |out<14>        |   18.226|
+B<0>           |out<15>        |   16.762|
+B<0>           |out<16>        |   16.766|
+B<0>           |out<17>        |   16.089|
+B<0>           |out<18>        |   16.310|
+B<0>           |out<19>        |   16.105|
+B<0>           |out<20>        |   18.171|
+B<0>           |out<21>        |   16.896|
+B<0>           |out<22>        |   17.966|
+B<0>           |out<23>        |   17.456|
+B<0>           |out<24>        |   16.836|
+B<0>           |out<25>        |   17.296|
+B<0>           |out<26>        |   17.528|
+B<0>           |out<27>        |   17.846|
+B<0>           |out<28>        |   17.857|
+B<0>           |out<29>        |   17.568|
+B<0>           |out<30>        |   17.314|
+B<0>           |out<31>        |   19.697|
+B<0>           |zero           |   18.918|
+B<1>           |out<1>         |   13.195|
+B<1>           |out<2>         |   14.398|
+B<1>           |out<3>         |   14.655|
+B<1>           |out<4>         |   14.573|
+B<1>           |out<5>         |   15.084|
+B<1>           |out<6>         |   14.762|
+B<1>           |out<7>         |   14.383|
+B<1>           |out<8>         |   14.909|
+B<1>           |out<9>         |   16.508|
+B<1>           |out<10>        |   16.131|
+B<1>           |out<11>        |   15.099|
+B<1>           |out<12>        |   17.958|
+B<1>           |out<13>        |   17.457|
+B<1>           |out<14>        |   17.698|
+B<1>           |out<15>        |   16.234|
+B<1>           |out<16>        |   16.039|
+B<1>           |out<17>        |   15.561|
+B<1>           |out<18>        |   15.782|
+B<1>           |out<19>        |   15.577|
+B<1>           |out<20>        |   17.507|
+B<1>           |out<21>        |   16.368|
+B<1>           |out<22>        |   17.379|
+B<1>           |out<23>        |   16.928|
+B<1>           |out<24>        |   16.308|
+B<1>           |out<25>        |   16.569|
+B<1>           |out<26>        |   16.801|
+B<1>           |out<27>        |   17.318|
+B<1>           |out<28>        |   17.329|
+B<1>           |out<29>        |   17.040|
+B<1>           |out<30>        |   16.759|
+B<1>           |out<31>        |   19.169|
+B<1>           |zero           |   18.362|
+B<2>           |out<2>         |   13.616|
+B<2>           |out<3>         |   14.300|
+B<2>           |out<4>         |   14.443|
+B<2>           |out<5>         |   14.954|
+B<2>           |out<6>         |   14.632|
+B<2>           |out<7>         |   14.253|
+B<2>           |out<8>         |   14.779|
+B<2>           |out<9>         |   16.378|
+B<2>           |out<10>        |   16.001|
+B<2>           |out<11>        |   14.635|
+B<2>           |out<12>        |   17.828|
+B<2>           |out<13>        |   17.327|
+B<2>           |out<14>        |   17.568|
+B<2>           |out<15>        |   16.104|
+B<2>           |out<16>        |   15.644|
+B<2>           |out<17>        |   15.431|
+B<2>           |out<18>        |   15.652|
+B<2>           |out<19>        |   15.447|
+B<2>           |out<20>        |   17.377|
+B<2>           |out<21>        |   16.238|
+B<2>           |out<22>        |   17.249|
+B<2>           |out<23>        |   16.798|
+B<2>           |out<24>        |   16.178|
+B<2>           |out<25>        |   16.012|
+B<2>           |out<26>        |   16.645|
+B<2>           |out<27>        |   17.188|
+B<2>           |out<28>        |   17.199|
+B<2>           |out<29>        |   16.910|
+B<2>           |out<30>        |   16.629|
+B<2>           |out<31>        |   19.039|
+B<2>           |zero           |   18.232|
+B<3>           |out<3>         |   14.014|
+B<3>           |out<4>         |   14.601|
+B<3>           |out<5>         |   15.112|
+B<3>           |out<6>         |   14.790|
+B<3>           |out<7>         |   14.411|
+B<3>           |out<8>         |   14.937|
+B<3>           |out<9>         |   16.536|
+B<3>           |out<10>        |   16.159|
+B<3>           |out<11>        |   15.137|
+B<3>           |out<12>        |   17.986|
+B<3>           |out<13>        |   17.485|
+B<3>           |out<14>        |   17.726|
+B<3>           |out<15>        |   16.262|
+B<3>           |out<16>        |   16.077|
+B<3>           |out<17>        |   15.589|
+B<3>           |out<18>        |   15.810|
+B<3>           |out<19>        |   15.605|
+B<3>           |out<20>        |   17.535|
+B<3>           |out<21>        |   16.396|
+B<3>           |out<22>        |   17.407|
+B<3>           |out<23>        |   16.956|
+B<3>           |out<24>        |   16.336|
+B<3>           |out<25>        |   16.607|
+B<3>           |out<26>        |   16.839|
+B<3>           |out<27>        |   17.346|
+B<3>           |out<28>        |   17.357|
+B<3>           |out<29>        |   17.068|
+B<3>           |out<30>        |   16.787|
+B<3>           |out<31>        |   19.197|
+B<3>           |zero           |   18.390|
+B<4>           |out<4>         |   13.122|
+B<4>           |out<5>         |   14.102|
+B<4>           |out<6>         |   14.144|
+B<4>           |out<7>         |   13.626|
+B<4>           |out<8>         |   14.152|
+B<4>           |out<9>         |   15.751|
+B<4>           |out<10>        |   15.374|
+B<4>           |out<11>        |   14.525|
+B<4>           |out<12>        |   17.201|
+B<4>           |out<13>        |   16.705|
+B<4>           |out<14>        |   16.941|
+B<4>           |out<15>        |   15.477|
+B<4>           |out<16>        |   15.465|
+B<4>           |out<17>        |   14.804|
+B<4>           |out<18>        |   15.025|
+B<4>           |out<19>        |   14.820|
+B<4>           |out<20>        |   16.870|
+B<4>           |out<21>        |   15.611|
+B<4>           |out<22>        |   16.665|
+B<4>           |out<23>        |   16.171|
+B<4>           |out<24>        |   15.551|
+B<4>           |out<25>        |   15.995|
+B<4>           |out<26>        |   16.227|
+B<4>           |out<27>        |   16.561|
+B<4>           |out<28>        |   16.572|
+B<4>           |out<29>        |   16.283|
+B<4>           |out<30>        |   16.013|
+B<4>           |out<31>        |   18.412|
+B<4>           |zero           |   17.617|
+B<5>           |out<5>         |   14.582|
+B<5>           |out<6>         |   15.131|
+B<5>           |out<7>         |   14.537|
+B<5>           |out<8>         |   15.063|
+B<5>           |out<9>         |   16.662|
+B<5>           |out<10>        |   16.285|
+B<5>           |out<11>        |   15.512|
+B<5>           |out<12>        |   18.112|
+B<5>           |out<13>        |   17.692|
+B<5>           |out<14>        |   17.852|
+B<5>           |out<15>        |   16.388|
+B<5>           |out<16>        |   16.452|
+B<5>           |out<17>        |   15.715|
+B<5>           |out<18>        |   15.936|
+B<5>           |out<19>        |   15.731|
+B<5>           |out<20>        |   17.857|
+B<5>           |out<21>        |   16.522|
+B<5>           |out<22>        |   17.652|
+B<5>           |out<23>        |   17.082|
+B<5>           |out<24>        |   16.507|
+B<5>           |out<25>        |   16.982|
+B<5>           |out<26>        |   17.214|
+B<5>           |out<27>        |   17.472|
+B<5>           |out<28>        |   17.483|
+B<5>           |out<29>        |   17.218|
+B<5>           |out<30>        |   17.000|
+B<5>           |out<31>        |   19.323|
+B<5>           |zero           |   18.604|
+B<6>           |out<6>         |   13.503|
+B<6>           |out<7>         |   13.512|
+B<6>           |out<8>         |   14.185|
+B<6>           |out<9>         |   15.450|
+B<6>           |out<10>        |   15.073|
+B<6>           |out<11>        |   14.721|
+B<6>           |out<12>        |   17.204|
+B<6>           |out<13>        |   16.901|
+B<6>           |out<14>        |   17.027|
+B<6>           |out<15>        |   15.176|
+B<6>           |out<16>        |   15.661|
+B<6>           |out<17>        |   14.503|
+B<6>           |out<18>        |   14.724|
+B<6>           |out<19>        |   14.831|
+B<6>           |out<20>        |   17.066|
+B<6>           |out<21>        |   15.721|
+B<6>           |out<22>        |   16.861|
+B<6>           |out<23>        |   15.870|
+B<6>           |out<24>        |   15.716|
+B<6>           |out<25>        |   16.191|
+B<6>           |out<26>        |   16.423|
+B<6>           |out<27>        |   16.354|
+B<6>           |out<28>        |   16.271|
+B<6>           |out<29>        |   16.427|
+B<6>           |out<30>        |   16.209|
+B<6>           |out<31>        |   18.144|
+B<6>           |zero           |   17.813|
+B<7>           |out<7>         |   13.378|
+B<7>           |out<8>         |   14.495|
+B<7>           |out<9>         |   15.803|
+B<7>           |out<10>        |   15.426|
+B<7>           |out<11>        |   15.031|
+B<7>           |out<12>        |   17.514|
+B<7>           |out<13>        |   17.211|
+B<7>           |out<14>        |   17.337|
+B<7>           |out<15>        |   15.529|
+B<7>           |out<16>        |   15.971|
+B<7>           |out<17>        |   14.856|
+B<7>           |out<18>        |   15.077|
+B<7>           |out<19>        |   15.141|
+B<7>           |out<20>        |   17.376|
+B<7>           |out<21>        |   16.031|
+B<7>           |out<22>        |   17.171|
+B<7>           |out<23>        |   16.223|
+B<7>           |out<24>        |   16.026|
+B<7>           |out<25>        |   16.501|
+B<7>           |out<26>        |   16.733|
+B<7>           |out<27>        |   16.664|
+B<7>           |out<28>        |   16.624|
+B<7>           |out<29>        |   16.737|
+B<7>           |out<30>        |   16.519|
+B<7>           |out<31>        |   18.464|
+B<7>           |zero           |   18.123|
+B<8>           |out<8>         |   13.411|
+B<8>           |out<9>         |   14.530|
+B<8>           |out<10>        |   14.378|
+B<8>           |out<11>        |   13.752|
+B<8>           |out<12>        |   16.235|
+B<8>           |out<13>        |   15.932|
+B<8>           |out<14>        |   16.058|
+B<8>           |out<15>        |   14.481|
+B<8>           |out<16>        |   14.692|
+B<8>           |out<17>        |   13.808|
+B<8>           |out<18>        |   14.029|
+B<8>           |out<19>        |   13.862|
+B<8>           |out<20>        |   16.097|
+B<8>           |out<21>        |   14.752|
+B<8>           |out<22>        |   15.892|
+B<8>           |out<23>        |   15.175|
+B<8>           |out<24>        |   14.747|
+B<8>           |out<25>        |   15.222|
+B<8>           |out<26>        |   15.454|
+B<8>           |out<27>        |   15.565|
+B<8>           |out<28>        |   15.576|
+B<8>           |out<29>        |   15.458|
+B<8>           |out<30>        |   15.240|
+B<8>           |out<31>        |   17.416|
+B<8>           |zero           |   16.844|
+B<9>           |out<9>         |   15.465|
+B<9>           |out<10>        |   15.757|
+B<9>           |out<11>        |   14.587|
+B<9>           |out<12>        |   17.584|
+B<9>           |out<13>        |   17.083|
+B<9>           |out<14>        |   17.324|
+B<9>           |out<15>        |   15.860|
+B<9>           |out<16>        |   15.527|
+B<9>           |out<17>        |   15.187|
+B<9>           |out<18>        |   15.408|
+B<9>           |out<19>        |   15.203|
+B<9>           |out<20>        |   17.133|
+B<9>           |out<21>        |   15.994|
+B<9>           |out<22>        |   17.005|
+B<9>           |out<23>        |   16.554|
+B<9>           |out<24>        |   15.934|
+B<9>           |out<25>        |   16.057|
+B<9>           |out<26>        |   16.401|
+B<9>           |out<27>        |   16.944|
+B<9>           |out<28>        |   16.955|
+B<9>           |out<29>        |   16.666|
+B<9>           |out<30>        |   16.385|
+B<9>           |out<31>        |   18.795|
+B<9>           |zero           |   17.988|
+B<10>          |out<10>        |   13.920|
+B<10>          |out<11>        |   13.560|
+B<10>          |out<12>        |   16.592|
+B<10>          |out<13>        |   16.091|
+B<10>          |out<14>        |   16.332|
+B<10>          |out<15>        |   14.868|
+B<10>          |out<16>        |   14.717|
+B<10>          |out<17>        |   14.195|
+B<10>          |out<18>        |   14.416|
+B<10>          |out<19>        |   14.211|
+B<10>          |out<20>        |   16.141|
+B<10>          |out<21>        |   15.002|
+B<10>          |out<22>        |   16.013|
+B<10>          |out<23>        |   15.562|
+B<10>          |out<24>        |   14.942|
+B<10>          |out<25>        |   15.247|
+B<10>          |out<26>        |   15.479|
+B<10>          |out<27>        |   15.952|
+B<10>          |out<28>        |   15.963|
+B<10>          |out<29>        |   15.674|
+B<10>          |out<30>        |   15.393|
+B<10>          |out<31>        |   17.803|
+B<10>          |zero           |   16.996|
+B<11>          |out<11>        |   14.429|
+B<11>          |out<12>        |   17.791|
+B<11>          |out<13>        |   17.290|
+B<11>          |out<14>        |   17.531|
+B<11>          |out<15>        |   16.067|
+B<11>          |out<16>        |   16.030|
+B<11>          |out<17>        |   15.394|
+B<11>          |out<18>        |   15.615|
+B<11>          |out<19>        |   15.410|
+B<11>          |out<20>        |   17.435|
+B<11>          |out<21>        |   16.201|
+B<11>          |out<22>        |   17.230|
+B<11>          |out<23>        |   16.761|
+B<11>          |out<24>        |   16.141|
+B<11>          |out<25>        |   16.560|
+B<11>          |out<26>        |   16.792|
+B<11>          |out<27>        |   17.151|
+B<11>          |out<28>        |   17.162|
+B<11>          |out<29>        |   16.873|
+B<11>          |out<30>        |   16.592|
+B<11>          |out<31>        |   19.002|
+B<11>          |zero           |   18.195|
+B<12>          |out<12>        |   15.943|
+B<12>          |out<13>        |   16.062|
+B<12>          |out<14>        |   16.528|
+B<12>          |out<15>        |   15.064|
+B<12>          |out<16>        |   15.020|
+B<12>          |out<17>        |   14.391|
+B<12>          |out<18>        |   14.612|
+B<12>          |out<19>        |   14.407|
+B<12>          |out<20>        |   16.425|
+B<12>          |out<21>        |   15.198|
+B<12>          |out<22>        |   16.220|
+B<12>          |out<23>        |   15.758|
+B<12>          |out<24>        |   15.138|
+B<12>          |out<25>        |   15.550|
+B<12>          |out<26>        |   15.782|
+B<12>          |out<27>        |   16.148|
+B<12>          |out<28>        |   16.159|
+B<12>          |out<29>        |   15.870|
+B<12>          |out<30>        |   15.589|
+B<12>          |out<31>        |   17.999|
+B<12>          |zero           |   17.192|
+B<13>          |out<13>        |   15.972|
+B<13>          |out<14>        |   16.882|
+B<13>          |out<15>        |   15.418|
+B<13>          |out<16>        |   14.958|
+B<13>          |out<17>        |   14.745|
+B<13>          |out<18>        |   14.966|
+B<13>          |out<19>        |   14.761|
+B<13>          |out<20>        |   16.691|
+B<13>          |out<21>        |   15.552|
+B<13>          |out<22>        |   16.563|
+B<13>          |out<23>        |   16.112|
+B<13>          |out<24>        |   15.492|
+B<13>          |out<25>        |   15.455|
+B<13>          |out<26>        |   15.959|
+B<13>          |out<27>        |   16.502|
+B<13>          |out<28>        |   16.513|
+B<13>          |out<29>        |   16.224|
+B<13>          |out<30>        |   15.943|
+B<13>          |out<31>        |   18.353|
+B<13>          |zero           |   17.546|
+B<14>          |out<14>        |   16.460|
+B<14>          |out<15>        |   15.616|
+B<14>          |out<16>        |   15.789|
+B<14>          |out<17>        |   15.168|
+B<14>          |out<18>        |   15.389|
+B<14>          |out<19>        |   15.184|
+B<14>          |out<20>        |   17.194|
+B<14>          |out<21>        |   15.975|
+B<14>          |out<22>        |   16.989|
+B<14>          |out<23>        |   16.535|
+B<14>          |out<24>        |   15.915|
+B<14>          |out<25>        |   16.319|
+B<14>          |out<26>        |   16.551|
+B<14>          |out<27>        |   16.925|
+B<14>          |out<28>        |   16.936|
+B<14>          |out<29>        |   16.647|
+B<14>          |out<30>        |   16.366|
+B<14>          |out<31>        |   18.776|
+B<14>          |zero           |   17.969|
+B<15>          |out<15>        |   16.296|
+B<15>          |out<16>        |   16.505|
+B<15>          |out<17>        |   16.292|
+B<15>          |out<18>        |   16.513|
+B<15>          |out<19>        |   16.308|
+B<15>          |out<20>        |   18.238|
+B<15>          |out<21>        |   17.099|
+B<15>          |out<22>        |   18.110|
+B<15>          |out<23>        |   17.659|
+B<15>          |out<24>        |   17.039|
+B<15>          |out<25>        |   16.871|
+B<15>          |out<26>        |   17.506|
+B<15>          |out<27>        |   18.049|
+B<15>          |out<28>        |   18.060|
+B<15>          |out<29>        |   17.771|
+B<15>          |out<30>        |   17.490|
+B<15>          |out<31>        |   19.900|
+B<15>          |zero           |   19.093|
+B<16>          |out<16>        |   14.171|
+B<16>          |out<17>        |   14.421|
+B<16>          |out<18>        |   14.867|
+B<16>          |out<19>        |   14.662|
+B<16>          |out<20>        |   16.592|
+B<16>          |out<21>        |   15.453|
+B<16>          |out<22>        |   16.464|
+B<16>          |out<23>        |   16.013|
+B<16>          |out<24>        |   15.393|
+B<16>          |out<25>        |   15.538|
+B<16>          |out<26>        |   15.860|
+B<16>          |out<27>        |   16.403|
+B<16>          |out<28>        |   16.414|
+B<16>          |out<29>        |   16.125|
+B<16>          |out<30>        |   15.844|
+B<16>          |out<31>        |   18.254|
+B<16>          |zero           |   17.447|
+B<17>          |out<17>        |   14.397|
+B<17>          |out<18>        |   15.287|
+B<17>          |out<19>        |   15.082|
+B<17>          |out<20>        |   17.012|
+B<17>          |out<21>        |   15.873|
+B<17>          |out<22>        |   16.884|
+B<17>          |out<23>        |   16.433|
+B<17>          |out<24>        |   15.813|
+B<17>          |out<25>        |   15.563|
+B<17>          |out<26>        |   16.280|
+B<17>          |out<27>        |   16.823|
+B<17>          |out<28>        |   16.834|
+B<17>          |out<29>        |   16.545|
+B<17>          |out<30>        |   16.264|
+B<17>          |out<31>        |   18.674|
+B<17>          |zero           |   17.867|
+B<18>          |out<18>        |   13.963|
+B<18>          |out<19>        |   14.378|
+B<18>          |out<20>        |   16.533|
+B<18>          |out<21>        |   15.394|
+B<18>          |out<22>        |   16.405|
+B<18>          |out<23>        |   15.954|
+B<18>          |out<24>        |   15.334|
+B<18>          |out<25>        |   15.601|
+B<18>          |out<26>        |   15.833|
+B<18>          |out<27>        |   16.344|
+B<18>          |out<28>        |   16.355|
+B<18>          |out<29>        |   16.066|
+B<18>          |out<30>        |   15.785|
+B<18>          |out<31>        |   18.195|
+B<18>          |zero           |   17.388|
+B<19>          |out<19>        |   14.493|
+B<19>          |out<20>        |   17.092|
+B<19>          |out<21>        |   15.953|
+B<19>          |out<22>        |   16.964|
+B<19>          |out<23>        |   16.513|
+B<19>          |out<24>        |   15.893|
+B<19>          |out<25>        |   16.103|
+B<19>          |out<26>        |   16.360|
+B<19>          |out<27>        |   16.903|
+B<19>          |out<28>        |   16.914|
+B<19>          |out<29>        |   16.625|
+B<19>          |out<30>        |   16.344|
+B<19>          |out<31>        |   18.754|
+B<19>          |zero           |   17.947|
+B<20>          |out<20>        |   15.296|
+B<20>          |out<21>        |   14.640|
+B<20>          |out<22>        |   15.928|
+B<20>          |out<23>        |   15.425|
+B<20>          |out<24>        |   14.805|
+B<20>          |out<25>        |   15.258|
+B<20>          |out<26>        |   15.490|
+B<20>          |out<27>        |   15.815|
+B<20>          |out<28>        |   15.826|
+B<20>          |out<29>        |   15.537|
+B<20>          |out<30>        |   15.276|
+B<20>          |out<31>        |   17.666|
+B<20>          |zero           |   16.880|
+B<21>          |out<21>        |   14.303|
+B<21>          |out<22>        |   16.104|
+B<21>          |out<23>        |   15.354|
+B<21>          |out<24>        |   14.959|
+B<21>          |out<25>        |   15.434|
+B<21>          |out<26>        |   15.666|
+B<21>          |out<27>        |   15.744|
+B<21>          |out<28>        |   15.755|
+B<21>          |out<29>        |   15.670|
+B<21>          |out<30>        |   15.452|
+B<21>          |out<31>        |   17.595|
+B<21>          |zero           |   17.056|
+B<22>          |out<22>        |   14.471|
+B<22>          |out<23>        |   14.640|
+B<22>          |out<24>        |   14.245|
+B<22>          |out<25>        |   14.512|
+B<22>          |out<26>        |   14.744|
+B<22>          |out<27>        |   15.255|
+B<22>          |out<28>        |   15.266|
+B<22>          |out<29>        |   14.977|
+B<22>          |out<30>        |   14.696|
+B<22>          |out<31>        |   17.106|
+B<22>          |zero           |   16.299|
+B<23>          |out<23>        |   13.897|
+B<23>          |out<24>        |   13.946|
+B<23>          |out<25>        |   14.360|
+B<23>          |out<26>        |   14.592|
+B<23>          |out<27>        |   14.956|
+B<23>          |out<28>        |   14.967|
+B<23>          |out<29>        |   14.678|
+B<23>          |out<30>        |   14.397|
+B<23>          |out<31>        |   16.807|
+B<23>          |zero           |   16.000|
+B<24>          |out<24>        |   13.854|
+B<24>          |out<25>        |   13.822|
+B<24>          |out<26>        |   14.271|
+B<24>          |out<27>        |   14.480|
+B<24>          |out<28>        |   14.491|
+B<24>          |out<29>        |   14.275|
+B<24>          |out<30>        |   14.057|
+B<24>          |out<31>        |   16.331|
+B<24>          |zero           |   15.594|
+B<25>          |out<25>        |   14.348|
+B<25>          |out<26>        |   15.241|
+B<25>          |out<27>        |   15.192|
+B<25>          |out<28>        |   15.203|
+B<25>          |out<29>        |   15.245|
+B<25>          |out<30>        |   15.027|
+B<25>          |out<31>        |   17.043|
+B<25>          |zero           |   16.564|
+B<26>          |out<26>        |   13.001|
+B<26>          |out<27>        |   14.134|
+B<26>          |out<28>        |   14.370|
+B<26>          |out<29>        |   14.081|
+B<26>          |out<30>        |   13.800|
+B<26>          |out<31>        |   16.210|
+B<26>          |zero           |   15.400|
+B<27>          |out<27>        |   14.414|
+B<27>          |out<28>        |   15.094|
+B<27>          |out<29>        |   14.932|
+B<27>          |out<30>        |   14.714|
+B<27>          |out<31>        |   16.934|
+B<27>          |zero           |   16.251|
+B<28>          |out<28>        |   13.407|
+B<28>          |out<29>        |   13.825|
+B<28>          |out<30>        |   13.824|
+B<28>          |out<31>        |   16.092|
+B<28>          |zero           |   15.144|
+B<29>          |out<29>        |   15.070|
+B<29>          |out<30>        |   15.458|
+B<29>          |out<31>        |   17.868|
+B<29>          |zero           |   16.803|
+B<30>          |out<30>        |   13.047|
+B<30>          |out<31>        |   16.077|
+B<30>          |zero           |   15.012|
+B<31>          |out<31>        |   15.769|
+B<31>          |zero           |   14.704|
+---------------+---------------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 7360 paths, 0 nets, and 811 connections
+
+Design statistics:
+   Maximum path delay from/to any node:  19.936ns
+
+
+Analysis completed Fri Apr 17 14:50:21 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 323 MB
+
+
+
