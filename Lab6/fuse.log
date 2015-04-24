@@ -1,0 +1,21 @@
+Running: /opt/Xilinx/14.5/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/linus/Projects/ISE/Lab6/ALU_test_isim_beh.exe -prj /home/linus/Projects/ISE/Lab6/ALU_test_beh.prj work.ALU_test work.glbl 
+ISim P.58f (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/linus/Projects/ISE/Lab6/../Lab6_sup/bad_ALU.v" into library work
+Analyzing Verilog file "/home/linus/Projects/ISE/Lab6/../Lab6_sup/ALU_test.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 94488 KB
+Fuse CPU Usage: 1140 ms
+Compiling module bad_ALU
+Compiling module ALU_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 3 Verilog Units
+Built simulation executable /home/linus/Projects/ISE/Lab6/ALU_test_isim_beh.exe
+Fuse Memory Usage: 654720 KB
+Fuse CPU Usage: 1150 ms
+GCC CPU Usage: 320 ms
