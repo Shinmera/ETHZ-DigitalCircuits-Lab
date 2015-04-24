@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-04-17T14:57:30</DateModified>
+  <DateModified>2015-04-24T14:55:32</DateModified>
   <ModuleName>ALU</ModuleName>
   <SummaryTimeStamp>2015-04-17T14:50:26</SummaryTimeStamp>
   <SavedFilePath>/home/linus/Projects/ISE/Lab5/iseconfig/ALU.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/linus/Projects/ISE/Lab5</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/linus/Projects/ISE/Lab5/</ImplementationReportsDirectory>
   <DateInitialized>2015-04-17T14:20:21</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
