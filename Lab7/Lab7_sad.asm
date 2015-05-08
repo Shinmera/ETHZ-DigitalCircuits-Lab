@@ -2,8 +2,12 @@
 # Authors: Nicolas Hafner
 # Group: F32
 
-.text
+        .data
+left_image:     .word 5, 16, 7, 1, 1, 13, 2, 8, 10
+right_image:    .word 4, 15, 8, 0, 2, 12, 3, 7, 11
+target_image:   .word 0,  0, 0, 0, 0,  0, 0, 0,  0
 
+        .text
 ## Implicitly fixed registers:
 # $s0 left_image
 # $s1 right_image
@@ -11,9 +15,10 @@
 # We do this since we don't have enough return and argument
 # registers, and keeping them all intact over jumps would be
 # a pain.
-
 main:
-        jal     memory_init
+        la      $s0, left_image
+        la      $s1, right_image
+        la      $s2, target_image
 
         li      $a0, 9
         jal     calculate_sad
@@ -24,94 +29,6 @@ main:
 
         move    $t2, $v0
         j       end
-
-memory_init:
-	lui     $t1, 0x0000
-	ori     $t1, 0x0000
-
-        #left starting at $s0
-        move    $s0, $t1
-        # left_image[0]
-	li      $t0, 5
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # left_image[1]
-	li      $t0, 16
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # left_image[2]
-	li      $t0, 7
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # left_image[3]
-	li      $t0, 1
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # left_image[4]
-	li      $t0, 1
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # left_image[5]
-	li      $t0, 13
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # left_image[6]
-	li      $t0, 2
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # left_image[7]
-	li      $t0, 8
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # left_image[8]
-	li      $t0, 10
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-
-        # right starting at $s1
-        move    $s1, $t1
-        # right_image[0]
-	li      $t0, 4
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # right_image[1]
-	li      $t0, 15
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # right_image[2]
-	li      $t0, 8
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # right_image[3]
-	li      $t0, 0
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # right_image[4]
-	li      $t0, 2
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # right_image[5]
-	li      $t0, 12
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # right_image[6]
-	li      $t0, 3
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # right_image[7]
-	li      $t0, 7
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-        # right_image[8]
-	li      $t0, 11
-	sw      $t0, ($t1)
-        addi    $t1, $t1, 4
-
-        # target starting at $s2
-        move    $s2, $t1
-        # implicit zero allocation
-
-        jr      $ra
 
 calculate_sad:
 	li      $s3, 0
