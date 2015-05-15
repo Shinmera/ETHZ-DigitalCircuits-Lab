@@ -9,7 +9,7 @@
 #0x001e8484 original delay
 .data
 pattern: .word 0x00200000,0x00004000,0x00000080,0x00000001,0x00000002,0x00000004,0x00000008,0x00000400,0x00020000,0x01000000,0x02000000,0x04000000
-loopcnt: .word 125000,62500,31250,15625
+loopcnt: .word 2000000,500000,10000,10
 
 .text
    la $t3, loopcnt    # initialize a  large loopcounter (so that the snake does not crawl SUPERFAST)
