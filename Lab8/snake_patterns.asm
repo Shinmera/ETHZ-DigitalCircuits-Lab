@@ -26,8 +26,10 @@ forward:
    addi $t4, $t4, 4 # increment to the next address
    addi $t2, $0, 0 # clear $t2 counter
    lw $t6, 0x7ff4($0)
-   mul $t6, $t6, 4
    add $t7, $t3, $t6
+   add $t7, $t7, $t6
+   add $t7, $t7, $t6
+   add $t7, $t7, $t6
    lw $a0, 0($t7) 
 
 wait:
