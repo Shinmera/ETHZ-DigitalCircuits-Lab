@@ -65,7 +65,7 @@ abs_diff:
 
 recursive_sum:
         addi    $a1, $a1, -1
-        bgtz    $a1, recursive_sum_calc
+        bgez    $a1, recursive_sum_calc
         li      $v0, 0
         jr      $ra
 
