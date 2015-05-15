@@ -1,0 +1,34 @@
+#50 MHz FPGA board clock
+NET "FPGACLK" LOC = "T9" ;
+#Push button to reset the system
+NET "RESET" LOC = "L14";
+
+#Display Segment G (active low)
+NET "LED[6]" LOC = "N16";
+#Display Segment F (active low)
+NET "LED[5]" LOC = "F13";
+#Display Segment E (active low)
+NET "LED[4]" LOC = "R16";
+#Display Segment E (active low)
+NET "LED[3]" LOC = "P15";
+#Display Segment C (active low)
+NET "LED[2]" LOC = "N15";
+#Display Segment B (active low)
+NET "LED[1]" LOC = "G13";
+#Display Segment A (active low)
+NET "LED[0]" LOC = "E14";
+
+#Digit enable 3, (active low)
+NET "AN[3]" LOC = "E13";
+#Digit enable 2, (active low)
+NET "AN[2]" LOC = "F14";
+#Digit enable 1, (active low)
+NET "AN[1]" LOC = "G14";
+#Digit enable 0, (active low)
+NET "AN[0]" LOC = "D14";
+
+# TODO PART II for Lab 8
+# add input port to read the switch value for speed control of the snake
+
+NET "FPGACLK" TNM_NET = "clk_net";
+TIMESPEC "TS_CLK" = PERIOD "clk_net" 20 ns ;
