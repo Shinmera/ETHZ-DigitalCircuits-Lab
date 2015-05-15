@@ -1,5 +1,5 @@
 ### Sum of Absolute Differences Algorithm
-# Authors: Nicolas Hafner
+# Authors: Nicolas Hafner, Dino Bollinger
 # Group: F32
 
         .data

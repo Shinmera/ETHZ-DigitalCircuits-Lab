@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map P.58f on Fri May 15 13:50:04 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "FPGACLK" LOCATE = SITE "T9" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "E14" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "G13" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "N15" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "P15" LEVEL 1;
+COMP "LED<4>" LOCATE = SITE "R16" LEVEL 1;
+COMP "AN<0>" LOCATE = SITE "D14" LEVEL 1;
+COMP "LED<5>" LOCATE = SITE "F13" LEVEL 1;
+COMP "AN<1>" LOCATE = SITE "G14" LEVEL 1;
+COMP "LED<6>" LOCATE = SITE "N16" LEVEL 1;
+COMP "AN<2>" LOCATE = SITE "F14" LEVEL 1;
+COMP "AN<3>" LOCATE = SITE "E13" LEVEL 1;
+COMP "RESET" LOCATE = SITE "L14" LEVEL 1;
+NET "FPGACLK_BUFGP/IBUFG" BEL "FPGACLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk_net = BEL "ClockDiv/clk_count_0" BEL "ClockDiv/clk_count_1" BEL
+        "FPGACLK_BUFGP/BUFG.GCLKMUX" BEL "FPGACLK_BUFGP/BUFG";
+TS_CLK = PERIOD TIMEGRP "clk_net" 20 ns HIGH 50%;
+SCHEMATIC END;
+

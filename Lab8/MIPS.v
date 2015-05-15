@@ -96,7 +96,8 @@ module MIPS(
    /////////////////////////////////////
    // Instantiate the Instruction Memory
    InstructionMemory i_imem (
-                             .A(PC[5:0])
+                             .A(PC[5:0]),
+                             .RD(Instr)
                              );
    
    // Sign extension, replicate the MSB of the Immediate value 
@@ -124,8 +125,11 @@ module MIPS(
    assign SrcB = ALUSrc ? SignImm : WriteData ; // ALU input is either immediate or from register
 
    ALU i_alu (
-              .a(SrcA)
-              .b(SrcB)
+              .a(SrcA),
+              .b(SrcB),
+              .aluop(ALUControl),
+              .result(ALUResult),
+              .zero(zero)
               );        
    
    // Generate the PCSrc signal that tells to take the branch
@@ -134,31 +138,40 @@ module MIPS(
    ////////////////////////////////////
    // Instantiate the Data Memory
    DataMemory i_dmem (
-                      .CLK(CLK)
-                      .A(ALUResult)
-                      .WE(MemWrite)
-                      .WD(WriteData)
+                      .CLK(CLK),
+                      .A(ALUResult),
+                      .WE(MemWrite),
+                      .WD(WriteData),
+                      .RD(ReadData)
                       );
 
    // Memory Mapped I/O
    assign IsIO = (ALUResult[31:8] == 24'h00007f) ? 1 : 0; // 1: when datamemory address
    // falls into I/O  address range
    // TODO Part 1
-   assign IsMemWrite  =                // Is 1 when there is a SW instruction on DataMem address
-     assign IOWriteData =                // This line is connected directly to WriteData
-       assign IOAddr      =                // The LSB 4 bits of the Address is assigned to IOAddr
-         assign IOWriteEn   =                // Is 1 when there is a SW instruction on IO address 
+   assign IsMemWrite  = MemWrite & !IsIO;  // Is 1 when there is a SW instruction on DataMem address
+   assign IOWriteData = WriteData;         // This line is connected directly to WriteData
+   assign IOAddr      = ALUResult[3:0];      // The LSB 4 bits of the Address is assigned to IOAddr
+   assign IOWriteEn   = MemWrite & IsIO;   // Is 1 when there is a SW instruction on IO address 
    
-
-           assign ReadMemIO   = IsIO ? IOReadData : ReadData;   // Mux selects memory or I/O    
+   
+   assign ReadMemIO   = IsIO ? IOReadData : ReadData;   // Mux selects memory or I/O    
    // Select either the Data Memory (or IO) output or the ALU Result    
    assign Result = MemtoReg ? ReadMemIO : ALUResult;    // Slightly modified to include above
 
    ////////////////////////////////////
    // The Control Unit
    ControlUnit i_cont (
-                       .Op(Instr[31:26])
-                       .Funct(Instr[5:0])
+                       .Op(Instr[31:26]),
+                       .Funct(Instr[5:0]),
+                       .Jump(Jump),
+                       .MemtoReg(MemtoReg),
+                       .MemWrite(MemWrite),
+                       .Branch(Branch),
+                       .ALUControl(ALUControl),
+                       .ALUSrc(ALUSrc),
+                       .RegDst(RegDst),
+                       .RegWrite(RegWrite)
                        );
 
 

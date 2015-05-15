@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/linus/Projects/ISE/Lab8/impact.xsl
+OUTFILE=/home/linus/Projects/ISE/Lab8/impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=/home/linus/Projects/ISE/Lab8
+LICENSE=iMPACT
+USER_INFO=iMPACT

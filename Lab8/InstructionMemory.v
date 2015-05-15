@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module InstructionMemory(
                          input [5:0] A, // Address of the Instruction max 64 instructions
-                         o utput [31:0] RD   // Value at Address
+                         output [31:0] RD   // Value at Address
                          );
 
    reg [31:0]                        InsArr [63:0];  // Array holding the memory 64 entries each 32 bits
