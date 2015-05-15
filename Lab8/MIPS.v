@@ -96,7 +96,7 @@ module MIPS(
    /////////////////////////////////////
    // Instantiate the Instruction Memory
    InstructionMemory i_imem (
-                             .A(PC[5:0]),
+                             .A(PC[7:2]),
                              .RD(Instr)
                              );
    
@@ -127,9 +127,9 @@ module MIPS(
    ALU i_alu (
               .a(SrcA),
               .b(SrcB),
-              .aluop(ALUControl),
+              .aluop(ALUControl[3:0]),
               .result(ALUResult),
-              .zero(zero)
+              .zero(Zero)
               );        
    
    // Generate the PCSrc signal that tells to take the branch
@@ -139,8 +139,8 @@ module MIPS(
    // Instantiate the Data Memory
    DataMemory i_dmem (
                       .CLK(CLK),
-                      .A(ALUResult),
-                      .WE(MemWrite),
+                      .A(ALUResult[7:2]),
+                      .WE(IsMemWrite),
                       .WD(WriteData),
                       .RD(ReadData)
                       );
@@ -149,9 +149,9 @@ module MIPS(
    assign IsIO = (ALUResult[31:8] == 24'h00007f) ? 1 : 0; // 1: when datamemory address
    // falls into I/O  address range
    // TODO Part 1
-   assign IsMemWrite  = MemWrite & !IsIO;  // Is 1 when there is a SW instruction on DataMem address
+   assign IsMemWrite  = MemWrite & ~IsIO;  // Is 1 when there is a SW instruction on DataMem address
    assign IOWriteData = WriteData;         // This line is connected directly to WriteData
-   assign IOAddr      = ALUResult[3:0];      // The LSB 4 bits of the Address is assigned to IOAddr
+   assign IOAddr      = ALUResult[3:0];    // The LSB 4 bits of the Address is assigned to IOAddr
    assign IOWriteEn   = MemWrite & IsIO;   // Is 1 when there is a SW instruction on IO address 
    
    
