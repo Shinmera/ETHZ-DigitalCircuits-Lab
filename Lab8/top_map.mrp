@@ -9,33 +9,37 @@ Target Device  : xc3s200
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Fri May 15 13:50:02 2015
+Mapped Date    : Fri May 15 16:36:22 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            18 out of   3,840    1%
-  Number of 4 input LUTs:                 7 out of   3,840    1%
+  Number of Slice Flip Flops:            62 out of   3,840    1%
+  Number of 4 input LUTs:               690 out of   3,840   17%
 Logic Distribution:
-  Number of occupied Slices:             11 out of   1,920    1%
-    Number of Slices containing only related logic:      11 out of      11 100%
-    Number of Slices containing unrelated logic:          0 out of      11   0%
+  Number of occupied Slices:            369 out of   1,920   19%
+    Number of Slices containing only related logic:     369 out of     369 100%
+    Number of Slices containing unrelated logic:          0 out of     369   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          22 out of   3,840    1%
-    Number used as logic:                 7
-    Number used as a route-thru:         15
+  Total Number of 4 input LUTs:         710 out of   3,840   18%
+    Number used as logic:               434
+    Number used as a route-thru:         20
+    Number used for Dual Port RAMs:     128
+      (Two LUTs used per Dual Port RAM)
+    Number used for 32x1 RAMs:          128
+      (Two LUTs used per 32x1 RAM)
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 13 out of     173    7%
+  Number of bonded IOBs:                 15 out of     173    8%
   Number of BUFGMUXs:                     2 out of       8   25%
 
-Average Fanout of Non-Clock Nets:                1.93
+Average Fanout of Non-Clock Nets:                4.65
 
-Peak Memory Usage:  515 MB
+Peak Memory Usage:  520 MB
 Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 
@@ -97,9 +101,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 759 block(s) removed
+ 264 block(s) removed
    2 block(s) optimized away
- 887 signal(s) removed
+ 392 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -331,118 +335,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N131" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX6311" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<31>" is sourceless and has been removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<31>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<31>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<31>" (XOR) removed.
-      The signal "processor/ALUResult<31>" is sourceless and has been removed.
-       Sourceless block "processor/IsIO_cmp_eq0000_wg_lut<5>" (ROM) removed.
-        The signal "processor/IsIO_cmp_eq0000_wg_lut<5>" is sourceless and has been
-removed.
-         Sourceless block "processor/IsIO_cmp_eq0000_wg_cy<5>" (MUX) removed.
-          The signal "processor/IsIO" is sourceless and has been removed.
-           Sourceless block "processor/Result<0>2" (ROM) removed.
-            The signal "processor/N3" is sourceless and has been removed.
-             Sourceless block "processor/Result<7>" (ROM) removed.
-              The signal "processor/Result<7>" is sourceless and has been removed.
-             Sourceless block "processor/Result<3>" (ROM) removed.
-              The signal "processor/Result<3>" is sourceless and has been removed.
-             Sourceless block "processor/Result<2>" (ROM) removed.
-              The signal "processor/Result<2>" is sourceless and has been removed.
-             Sourceless block "processor/Result<1>" (ROM) removed.
-              The signal "processor/Result<1>" is sourceless and has been removed.
-             Sourceless block "processor/Result<17>" (ROM) removed.
-              The signal "processor/Result<17>" is sourceless and has been removed.
-             Sourceless block "processor/Result<15>" (ROM) removed.
-              The signal "processor/Result<15>" is sourceless and has been removed.
-             Sourceless block "processor/Result<14>" (ROM) removed.
-              The signal "processor/Result<14>" is sourceless and has been removed.
-             Sourceless block "processor/Result<10>" (ROM) removed.
-              The signal "processor/Result<10>" is sourceless and has been removed.
-             Sourceless block "processor/Result<0>" (ROM) removed.
-              The signal "processor/Result<0>" is sourceless and has been removed.
-           Sourceless block "processor/Result<5>19" (ROM) removed.
-            The signal "processor/Result<5>" is sourceless and has been removed.
-           Sourceless block "processor/Result<26>" (ROM) removed.
-            The signal "processor/Result<26>" is sourceless and has been removed.
-           Sourceless block "processor/Result<25>" (ROM) removed.
-            The signal "processor/Result<25>" is sourceless and has been removed.
-           Sourceless block "processor/Result<24>" (ROM) removed.
-            The signal "processor/Result<24>" is sourceless and has been removed.
-           Sourceless block "processor/Result<21>" (ROM) removed.
-            The signal "processor/Result<21>" is sourceless and has been removed.
-           Sourceless block "processor/Result<20>" (ROM) removed.
-            The signal "processor/Result<20>" is sourceless and has been removed.
-           Sourceless block "processor/Result<19>" (ROM) removed.
-            The signal "processor/Result<19>" is sourceless and has been removed.
-           Sourceless block "processor/Result<18>" (ROM) removed.
-            The signal "processor/Result<18>" is sourceless and has been removed.
-           Sourceless block "processor/Result<31>" (ROM) removed.
-            The signal "processor/Result<31>" is sourceless and has been removed.
-           Sourceless block "processor/Result<30>" (ROM) removed.
-            The signal "processor/Result<30>" is sourceless and has been removed.
-           Sourceless block "processor/Result<29>" (ROM) removed.
-            The signal "processor/Result<29>" is sourceless and has been removed.
-           Sourceless block "processor/Result<28>" (ROM) removed.
-            The signal "processor/Result<28>" is sourceless and has been removed.
-           Sourceless block "processor/Result<27>" (ROM) removed.
-            The signal "processor/Result<27>" is sourceless and has been removed.
-           Sourceless block "processor/Result<23>" (ROM) removed.
-            The signal "processor/Result<23>" is sourceless and has been removed.
-           Sourceless block "processor/Result<22>" (ROM) removed.
-            The signal "processor/Result<22>" is sourceless and has been removed.
-           Sourceless block "processor/Result<16>" (ROM) removed.
-            The signal "processor/Result<16>" is sourceless and has been removed.
-           Sourceless block "processor/Result<13>" (ROM) removed.
-            The signal "processor/Result<13>" is sourceless and has been removed.
-           Sourceless block "processor/Result<12>" (ROM) removed.
-            The signal "processor/Result<12>" is sourceless and has been removed.
-           Sourceless block "processor/Result<11>" (ROM) removed.
-            The signal "processor/Result<11>" is sourceless and has been removed.
-           Sourceless block "processor/Result<9>" (ROM) removed.
-            The signal "processor/Result<9>" is sourceless and has been removed.
-           Sourceless block "processor/Result<8>" (ROM) removed.
-            The signal "processor/Result<8>" is sourceless and has been removed.
-           Sourceless block "processor/Result<6>" (ROM) removed.
-            The signal "processor/Result<6>" is sourceless and has been removed.
-           Sourceless block "processor/Result<4>" (ROM) removed.
-            The signal "processor/Result<4>" is sourceless and has been removed.
-           Sourceless block "processor/Result<7>_SW0" (ROM) removed.
-            The signal "processor/Result<7>_SW0/O" is sourceless and has been removed.
-           Sourceless block "processor/Result<3>_SW0" (ROM) removed.
-            The signal "processor/Result<3>_SW0/O" is sourceless and has been removed.
-           Sourceless block "processor/Result<2>_SW0" (ROM) removed.
-            The signal "processor/Result<2>_SW0/O" is sourceless and has been removed.
-           Sourceless block "processor/Result<1>_SW0" (ROM) removed.
-            The signal "processor/Result<1>_SW0/O" is sourceless and has been removed.
-           Sourceless block "processor/Result<17>_SW0" (ROM) removed.
-            The signal "processor/Result<17>_SW0/O" is sourceless and has been removed.
-           Sourceless block "processor/Result<15>_SW0" (ROM) removed.
-            The signal "processor/Result<15>_SW0/O" is sourceless and has been removed.
-           Sourceless block "processor/Result<14>_SW0" (ROM) removed.
-            The signal "processor/Result<14>_SW0/O" is sourceless and has been removed.
-           Sourceless block "processor/Result<10>_SW0" (ROM) removed.
-            The signal "processor/Result<10>_SW0/O" is sourceless and has been removed.
-           Sourceless block "processor/Result<0>_SW0" (ROM) removed.
-            The signal "processor/Result<0>_SW0/O" is sourceless and has been removed.
-       Sourceless block "processor/Result<9>_SW0_SW10" (ROM) removed.
-        The signal "N136" is sourceless and has been removed.
-       Sourceless block "processor/Result<9>_SW0_SW9" (ROM) removed.
-        The signal "processor/Result<9>_SW0_SW9/O" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_31" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<31>"
-is sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/write_ctrl" is
-sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N128" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N129" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N126" is
 sourceless and has been removed.
@@ -451,40 +344,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N127" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX6211" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<30>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<30>1" (ROM) removed.
-    The signal "processor/SrcA<30>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<30>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<30>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/sel_b<30>1_SW0" (ROM) removed.
-    The signal "N176" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<30>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<30>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<30>" (XOR) removed.
-        The signal "processor/ALUResult<30>" is sourceless and has been removed.
-         Sourceless block "processor/IsIO_cmp_eq0000_wg_lut<4>" (ROM) removed.
-          The signal "processor/IsIO_cmp_eq0000_wg_lut<4>" is sourceless and has been
-removed.
-           Sourceless block "processor/IsIO_cmp_eq0000_wg_cy<4>" (MUX) removed.
-            The signal "processor/IsIO_cmp_eq0000_wg_cy<4>" is sourceless and has been
-removed.
-         Sourceless block "processor/Result<9>_SW0_SW12" (ROM) removed.
-          The signal "N139" is sourceless and has been removed.
-         Sourceless block "processor/Result<9>_SW0_SW11" (ROM) removed.
-          The signal "processor/Result<9>_SW0_SW11/O" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_30" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<30>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N124" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N125" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N122" is
 sourceless and has been removed.
@@ -493,40 +353,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N123" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX61111" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<29>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<29>1" (ROM) removed.
-    The signal "processor/SrcA<29>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<29>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<29>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/sel_b<29>1_SW0" (ROM) removed.
-    The signal "N174" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<29>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<29>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<29>" (XOR) removed.
-        The signal "processor/ALUResult<29>" is sourceless and has been removed.
-         Sourceless block "processor/IsIO_cmp_eq0000_wg_lut<3>" (ROM) removed.
-          The signal "processor/IsIO_cmp_eq0000_wg_lut<3>" is sourceless and has been
-removed.
-           Sourceless block "processor/IsIO_cmp_eq0000_wg_cy<3>" (MUX) removed.
-            The signal "processor/IsIO_cmp_eq0000_wg_cy<3>" is sourceless and has been
-removed.
-         Sourceless block "processor/Result<9>_SW0_SW14" (ROM) removed.
-          The signal "N142" is sourceless and has been removed.
-         Sourceless block "processor/Result<9>_SW0_SW13" (ROM) removed.
-          The signal "processor/Result<9>_SW0_SW13/O" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_29" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<29>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N120" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N121" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N118" is
 sourceless and has been removed.
@@ -535,40 +362,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N119" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX6011" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<28>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<28>1" (ROM) removed.
-    The signal "processor/SrcA<28>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<28>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<28>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/sel_b<28>1_SW0" (ROM) removed.
-    The signal "N172" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<28>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<28>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<28>" (XOR) removed.
-        The signal "processor/ALUResult<28>" is sourceless and has been removed.
-         Sourceless block "processor/IsIO_cmp_eq0000_wg_lut<2>" (ROM) removed.
-          The signal "processor/IsIO_cmp_eq0000_wg_lut<2>" is sourceless and has been
-removed.
-           Sourceless block "processor/IsIO_cmp_eq0000_wg_cy<2>" (MUX) removed.
-            The signal "processor/IsIO_cmp_eq0000_wg_cy<2>" is sourceless and has been
-removed.
-         Sourceless block "processor/Result<9>_SW0_SW16" (ROM) removed.
-          The signal "N145" is sourceless and has been removed.
-         Sourceless block "processor/Result<9>_SW0_SW15" (ROM) removed.
-          The signal "processor/Result<9>_SW0_SW15/O" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_28" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<28>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N116" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N117" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N114" is
 sourceless and has been removed.
@@ -577,40 +371,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N115" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5911" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<27>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<27>1" (ROM) removed.
-    The signal "processor/SrcA<27>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<27>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<27>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/sel_b<27>1_SW0" (ROM) removed.
-    The signal "N170" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<27>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<27>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<27>" (XOR) removed.
-        The signal "processor/ALUResult<27>" is sourceless and has been removed.
-         Sourceless block "processor/IsIO_cmp_eq0000_wg_lut<1>" (ROM) removed.
-          The signal "processor/IsIO_cmp_eq0000_wg_lut<1>" is sourceless and has been
-removed.
-           Sourceless block "processor/IsIO_cmp_eq0000_wg_cy<1>" (MUX) removed.
-            The signal "processor/IsIO_cmp_eq0000_wg_cy<1>" is sourceless and has been
-removed.
-         Sourceless block "processor/Result<9>_SW0_SW18" (ROM) removed.
-          The signal "N148" is sourceless and has been removed.
-         Sourceless block "processor/Result<9>_SW0_SW17" (ROM) removed.
-          The signal "processor/Result<9>_SW0_SW17/O" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_27" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<27>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N112" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N113" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N110" is
 sourceless and has been removed.
@@ -619,36 +380,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N111" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5811" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<26>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<26>1" (ROM) removed.
-    The signal "processor/SrcA<26>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<26>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<26>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/sel_b<26>1_SW0" (ROM) removed.
-    The signal "N168" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<26>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<26>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<26>" (XOR) removed.
-        The signal "processor/ALUResult<26>" is sourceless and has been removed.
-         Sourceless block "processor/IsIO_cmp_eq0000_wg_lut<0>" (ROM) removed.
-          The signal "processor/IsIO_cmp_eq0000_wg_lut<0>" is sourceless and has been
-removed.
-           Sourceless block "processor/IsIO_cmp_eq0000_wg_cy<0>" (MUX) removed.
-            The signal "processor/IsIO_cmp_eq0000_wg_cy<0>" is sourceless and has been
-removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_26" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<26>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N108" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N109" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N106" is
 sourceless and has been removed.
@@ -657,28 +389,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N107" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5711" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<25>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<25>1" (ROM) removed.
-    The signal "processor/SrcA<25>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<25>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<25>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<25>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<25>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<25>" (XOR) removed.
-      The signal "processor/ALUResult<25>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_25" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<25>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N104" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N105" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N102" is
 sourceless and has been removed.
@@ -687,28 +398,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N103" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5611" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<24>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<24>1" (ROM) removed.
-    The signal "processor/SrcA<24>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<24>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<24>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<24>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<24>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<24>" (XOR) removed.
-      The signal "processor/ALUResult<24>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_24" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<24>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N100" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N101" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N98" is
 sourceless and has been removed.
@@ -717,28 +407,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N99" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5511" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<23>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<23>1" (ROM) removed.
-    The signal "processor/SrcA<23>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<23>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<23>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<23>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<23>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<23>" (XOR) removed.
-      The signal "processor/ALUResult<23>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_23" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<23>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N96" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N97" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N94" is
 sourceless and has been removed.
@@ -747,28 +416,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N95" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5411" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<22>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<22>1" (ROM) removed.
-    The signal "processor/SrcA<22>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<22>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<22>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<22>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<22>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<22>" (XOR) removed.
-      The signal "processor/ALUResult<22>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_22" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<22>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N92" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N93" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N90" is
 sourceless and has been removed.
@@ -777,28 +425,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N91" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5311" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<21>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<21>1" (ROM) removed.
-    The signal "processor/SrcA<21>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<21>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<21>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<21>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<21>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<21>" (XOR) removed.
-      The signal "processor/ALUResult<21>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_21" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<21>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N88" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N89" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N86" is
 sourceless and has been removed.
@@ -807,28 +434,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N87" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5211" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<20>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<20>1" (ROM) removed.
-    The signal "processor/SrcA<20>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<20>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<20>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<20>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<20>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<20>" (XOR) removed.
-      The signal "processor/ALUResult<20>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_20" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<20>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N84" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N85" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N82" is
 sourceless and has been removed.
@@ -837,28 +443,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N83" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX51111" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<19>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<19>1" (ROM) removed.
-    The signal "processor/SrcA<19>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<19>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<19>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<19>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<19>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<19>" (XOR) removed.
-      The signal "processor/ALUResult<19>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_19" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<19>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N80" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N81" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N78" is
 sourceless and has been removed.
@@ -867,28 +452,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N79" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5011" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<18>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<18>1" (ROM) removed.
-    The signal "processor/SrcA<18>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<18>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<18>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<18>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<18>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<18>" (XOR) removed.
-      The signal "processor/ALUResult<18>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_18" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<18>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N76" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N77" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N74" is
 sourceless and has been removed.
@@ -897,28 +461,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N75" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4911" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<17>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<17>1" (ROM) removed.
-    The signal "processor/SrcA<17>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<17>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<17>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<17>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<17>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<17>" (XOR) removed.
-      The signal "processor/ALUResult<17>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_17" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<17>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N72" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N73" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N70" is
 sourceless and has been removed.
@@ -927,28 +470,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N71" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4811" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<16>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<16>1" (ROM) removed.
-    The signal "processor/SrcA<16>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<16>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<16>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<16>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<16>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<16>" (XOR) removed.
-      The signal "processor/ALUResult<16>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_16" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<16>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N68" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N69" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N66" is
 sourceless and has been removed.
@@ -957,28 +479,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N67" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4711" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<15>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<15>1" (ROM) removed.
-    The signal "processor/SrcA<15>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<15>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<15>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<15>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<15>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<15>" (XOR) removed.
-      The signal "processor/ALUResult<15>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_15" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<15>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N64" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N65" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N62" is
 sourceless and has been removed.
@@ -987,28 +488,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N63" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4611" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<14>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<14>1" (ROM) removed.
-    The signal "processor/SrcA<14>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<14>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<14>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<14>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<14>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<14>" (XOR) removed.
-      The signal "processor/ALUResult<14>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_14" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<14>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N60" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N61" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N58" is
 sourceless and has been removed.
@@ -1017,28 +497,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N59" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4511" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<13>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<13>1" (ROM) removed.
-    The signal "processor/SrcA<13>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<13>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<13>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<13>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<13>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<13>" (XOR) removed.
-      The signal "processor/ALUResult<13>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_13" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<13>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N56" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N57" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N54" is
 sourceless and has been removed.
@@ -1047,28 +506,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N55" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4411" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<12>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<12>1" (ROM) removed.
-    The signal "processor/SrcA<12>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<12>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<12>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<12>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<12>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<12>" (XOR) removed.
-      The signal "processor/ALUResult<12>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_12" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<12>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N52" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N53" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N50" is
 sourceless and has been removed.
@@ -1077,28 +515,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N51" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4311" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<11>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<11>1" (ROM) removed.
-    The signal "processor/SrcA<11>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<11>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<11>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<11>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<11>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<11>" (XOR) removed.
-      The signal "processor/ALUResult<11>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_11" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<11>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N48" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N49" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N46" is
 sourceless and has been removed.
@@ -1107,28 +524,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N47" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4211" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<10>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<10>1" (ROM) removed.
-    The signal "processor/SrcA<10>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<10>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<10>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<10>" (ROM) removed.
-    The signal "processor/i_alu/Madd_addout_lut<10>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_xor<10>" (XOR) removed.
-      The signal "processor/ALUResult<10>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_10" (FF)
-removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<10>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N44" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N45" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N42" is
 sourceless and has been removed.
@@ -1137,29 +533,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N43" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX41111" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<9>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<9>1" (ROM) removed.
-    The signal "processor/SrcA<9>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<9>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<9>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<9>_SW0" (ROM) removed.
-    The signal "N208" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<9>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<9>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<9>" (XOR) removed.
-        The signal "processor/ALUResult<9>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_9" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<9>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N40" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N41" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N38" is
 sourceless and has been removed.
@@ -1168,29 +542,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N39" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4011" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<8>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<8>1" (ROM) removed.
-    The signal "processor/SrcA<8>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<8>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<8>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<8>_SW0" (ROM) removed.
-    The signal "N206" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<8>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<8>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<8>" (XOR) removed.
-        The signal "processor/ALUResult<8>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_8" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<8>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N36" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N37" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N34" is
 sourceless and has been removed.
@@ -1199,29 +551,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N35" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3911" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<7>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<7>1" (ROM) removed.
-    The signal "processor/SrcA<7>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<7>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<7>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<7>_SW0" (ROM) removed.
-    The signal "N204" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<7>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<7>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<7>" (XOR) removed.
-        The signal "processor/ALUResult<7>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_7" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<7>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N32" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N33" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N30" is
 sourceless and has been removed.
@@ -1230,29 +560,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N31" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3811" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<6>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<6>1" (ROM) removed.
-    The signal "processor/SrcA<6>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<6>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<6>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<6>_SW0" (ROM) removed.
-    The signal "N202" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<6>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<6>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<6>" (XOR) removed.
-        The signal "processor/ALUResult<6>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_6" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<6>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N28" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N29" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N26" is
 sourceless and has been removed.
@@ -1261,61 +569,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N27" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3711" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<5>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<5>1" (ROM) removed.
-    The signal "processor/SrcA<5>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<5>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<5>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<5>_SW0" (ROM) removed.
-    The signal "N200" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<5>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<5>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<5>" (XOR) removed.
-        The signal "processor/ALUResult<5>" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW0" (ROM) removed.
-          The signal "N105" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW1" (ROM) removed.
-          The signal "N107" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW2" (ROM) removed.
-          The signal "N109" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW3" (ROM) removed.
-          The signal "N111" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW4" (ROM) removed.
-          The signal "N113" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW5" (ROM) removed.
-          The signal "N115" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW6" (ROM) removed.
-          The signal "N117" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW7" (ROM) removed.
-          The signal "N119" is sourceless and has been removed.
-         Sourceless block "processor/Result<5>11_SW8" (ROM) removed.
-          The signal "N121" is sourceless and has been removed.
-         Sourceless block "processor/Result<26>_SW0_SW2" (ROM) removed.
-          The signal "processor/Result<26>_SW0_SW2/O" is sourceless and has been removed.
-         Sourceless block "processor/Result<25>_SW0_SW2" (ROM) removed.
-          The signal "processor/Result<25>_SW0_SW2/O" is sourceless and has been removed.
-         Sourceless block "processor/Result<24>_SW0_SW2" (ROM) removed.
-          The signal "processor/Result<24>_SW0_SW2/O" is sourceless and has been removed.
-         Sourceless block "processor/Result<21>_SW0_SW2" (ROM) removed.
-          The signal "processor/Result<21>_SW0_SW2/O" is sourceless and has been removed.
-         Sourceless block "processor/Result<20>_SW0_SW2" (ROM) removed.
-          The signal "processor/Result<20>_SW0_SW2/O" is sourceless and has been removed.
-         Sourceless block "processor/Result<19>_SW0_SW2" (ROM) removed.
-          The signal "processor/Result<19>_SW0_SW2/O" is sourceless and has been removed.
-         Sourceless block "processor/Result<18>_SW0_SW2" (ROM) removed.
-          The signal "processor/Result<18>_SW0_SW2/O" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_5" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<5>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N24" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N25" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N22" is
 sourceless and has been removed.
@@ -1324,125 +578,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N23" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3611" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<4>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<4>1" (ROM) removed.
-    The signal "processor/SrcA<4>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<4>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<4>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<4>_SW0" (ROM) removed.
-    The signal "N198" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<4>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<4>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<4>" (XOR) removed.
-        The signal "processor/ALUResult<4>" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr1" (RAMS) removed.
-          The signal "processor/N36" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr2" (RAMS) removed.
-          The signal "processor/N38" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr3" (RAMS) removed.
-          The signal "processor/N40" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr4" (RAMS) removed.
-          The signal "processor/N42" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr5" (RAMS) removed.
-          The signal "processor/N44" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr6" (RAMS) removed.
-          The signal "processor/N46" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr7" (RAMS) removed.
-          The signal "processor/N48" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr8" (RAMS) removed.
-          The signal "processor/N50" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr10" (RAMS) removed.
-          The signal "processor/N54" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr12" (RAMS) removed.
-          The signal "processor/N58" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr14" (RAMS) removed.
-          The signal "processor/N62" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr15" (RAMS) removed.
-          The signal "processor/N64" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr16" (RAMS) removed.
-          The signal "processor/N66" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr18" (RAMS) removed.
-          The signal "processor/N70" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr20" (RAMS) removed.
-          The signal "processor/N74" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr21" (RAMS) removed.
-          The signal "processor/N76" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr22" (RAMS) removed.
-          The signal "processor/N78" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr24" (RAMS) removed.
-          The signal "processor/N82" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr26" (RAMS) removed.
-          The signal "processor/N86" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr28" (RAMS) removed.
-          The signal "processor/N90" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr29" (RAMS) removed.
-          The signal "processor/N92" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr30" (RAMS) removed.
-          The signal "processor/N94" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr31" (RAMS) removed.
-          The signal "processor/N96" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr32" (RAMS) removed.
-          The signal "processor/N98" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr34" (RAMS) removed.
-          The signal "processor/N102" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr35" (RAMS) removed.
-          The signal "processor/N104" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr36" (RAMS) removed.
-          The signal "processor/N106" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr37" (RAMS) removed.
-          The signal "processor/N108" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr38" (RAMS) removed.
-          The signal "processor/N110" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr39" (RAMS) removed.
-          The signal "processor/N112" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr40" (RAMS) removed.
-          The signal "processor/N114" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr41" (RAMS) removed.
-          The signal "processor/N116" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr42" (RAMS) removed.
-          The signal "processor/N118" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr43" (RAMS) removed.
-          The signal "processor/N120" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr44" (RAMS) removed.
-          The signal "processor/N122" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr46" (RAMS) removed.
-          The signal "processor/N126" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr48" (RAMS) removed.
-          The signal "processor/N130" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr49" (RAMS) removed.
-          The signal "processor/N132" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr50" (RAMS) removed.
-          The signal "processor/N134" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr51" (RAMS) removed.
-          The signal "processor/N136" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr52" (RAMS) removed.
-          The signal "processor/N138" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr53" (RAMS) removed.
-          The signal "processor/N140" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr54" (RAMS) removed.
-          The signal "processor/N142" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr56" (RAMS) removed.
-          The signal "processor/N146" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr58" (RAMS) removed.
-          The signal "processor/N150" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr60" (RAMS) removed.
-          The signal "processor/N154" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr62" (RAMS) removed.
-          The signal "processor/N158" is sourceless and has been removed.
-         Sourceless block "processor/i_dmem/Mram_DataArr64" (RAMS) removed.
-          The signal "processor/N162" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_4" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<4>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N20" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N21" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N18" is
 sourceless and has been removed.
@@ -1451,29 +587,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N19" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3511" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<3>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<3>1" (ROM) removed.
-    The signal "processor/SrcA<3>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<3>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<3>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<3>_SW0" (ROM) removed.
-    The signal "N196" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<3>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<3>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<3>" (XOR) removed.
-        The signal "processor/ALUResult<3>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_3" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<3>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N16" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N17" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N14" is
 sourceless and has been removed.
@@ -1482,29 +596,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N15" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3411" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<2>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<2>1" (ROM) removed.
-    The signal "processor/SrcA<2>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<2>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<2>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<2>_SW0" (ROM) removed.
-    The signal "N194" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<2>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<2>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<2>" (XOR) removed.
-        The signal "processor/ALUResult<2>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_2" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<2>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N12" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N13" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N10" is
 sourceless and has been removed.
@@ -1513,59 +605,81 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N11" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3311" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<1>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<1>1" (ROM) removed.
-    The signal "processor/SrcA<1>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<1>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<1>" is sourceless and has been
-removed.
-   Sourceless block "processor/i_alu/Madd_addout_lut<1>_SW0" (ROM) removed.
-    The signal "N192" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<1>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<1>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<1>" (XOR) removed.
-        The signal "processor/ALUResult<1>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_1" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<1>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N8" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N9" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N4" is
 sourceless and has been removed.
  Sourceless block
 "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX11" (ROM)
 removed.
-The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N5" is
-sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3211" (ROM)
-removed.
-  The signal "processor/i_regf/Read1<0>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD1<0>1" (ROM) removed.
-    The signal "processor/SrcA<0>" is sourceless and has been removed.
-     Sourceless block "processor/i_alu/Madd_addout_cy<0>" (MUX) removed.
-      The signal "processor/i_alu/Madd_addout_cy<0>" is sourceless and has been
-removed.
-     Sourceless block "processor/i_alu/Madd_addout_lut<0>" (ROM) removed.
-      The signal "processor/i_alu/Madd_addout_lut<0>" is sourceless and has been
-removed.
-       Sourceless block "processor/i_alu/Madd_addout_xor<0>" (XOR) removed.
-        The signal "processor/ALUResult<0>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_0" (FF) removed.
-    The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<0>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N6" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/N7" is
 sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<31>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<30>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<29>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<28>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<27>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<26>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<25>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<24>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<23>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<22>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<21>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<20>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<19>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<18>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<17>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<16>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<15>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<14>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<13>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<12>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<11>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<10>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<9>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<8>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<7>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<6>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<5>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<4>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<3>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<2>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<1>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<0>"
+is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/spo<31>" is sourceless and has been
 removed.
  Sourceless block
@@ -1783,24 +897,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N131" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX6311" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<31>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<31>1" (ROM) removed.
-    The signal "processor/WriteData<31>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<31>1" (ROM) removed.
-    The signal "processor/SrcB<31>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_31" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<31>"
-is sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/write_ctrl" is
-sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N128" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N129" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N126" is
 sourceless and has been removed.
@@ -1809,20 +906,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N127" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX6211" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<30>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<30>1" (ROM) removed.
-    The signal "processor/WriteData<30>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_30" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<30>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N124" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N125" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N122" is
 sourceless and has been removed.
@@ -1831,20 +915,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N123" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX61111" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<29>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<29>1" (ROM) removed.
-    The signal "processor/WriteData<29>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_29" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<29>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N120" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N121" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N118" is
 sourceless and has been removed.
@@ -1853,20 +924,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N119" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX6011" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<28>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<28>1" (ROM) removed.
-    The signal "processor/WriteData<28>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_28" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<28>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N116" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N117" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N114" is
 sourceless and has been removed.
@@ -1875,20 +933,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N115" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5911" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<27>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<27>1" (ROM) removed.
-    The signal "IOWriteData<27>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_27" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<27>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N112" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N113" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N110" is
 sourceless and has been removed.
@@ -1897,20 +942,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N111" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5811" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<26>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<26>1" (ROM) removed.
-    The signal "IOWriteData<26>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_26" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<26>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N108" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N109" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N106" is
 sourceless and has been removed.
@@ -1919,22 +951,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N107" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5711" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<25>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<25>1" (ROM) removed.
-    The signal "IOWriteData<25>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<25>1" (ROM) removed.
-    The signal "processor/SrcB<25>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_25" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<25>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N104" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N105" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N102" is
 sourceless and has been removed.
@@ -1943,22 +960,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N103" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5611" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<24>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<24>1" (ROM) removed.
-    The signal "IOWriteData<24>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<24>1" (ROM) removed.
-    The signal "processor/SrcB<24>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_24" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<24>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N100" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N101" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N98" is
 sourceless and has been removed.
@@ -1967,22 +969,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N99" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5511" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<23>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<23>1" (ROM) removed.
-    The signal "IOWriteData<23>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<23>1" (ROM) removed.
-    The signal "processor/SrcB<23>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_23" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<23>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N96" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N97" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N94" is
 sourceless and has been removed.
@@ -1991,22 +978,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N95" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5411" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<22>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<22>1" (ROM) removed.
-    The signal "IOWriteData<22>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<22>1" (ROM) removed.
-    The signal "processor/SrcB<22>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_22" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<22>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N92" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N93" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N90" is
 sourceless and has been removed.
@@ -2015,22 +987,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N91" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5311" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<21>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<21>1" (ROM) removed.
-    The signal "IOWriteData<21>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<21>1" (ROM) removed.
-    The signal "processor/SrcB<21>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_21" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<21>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N88" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N89" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N86" is
 sourceless and has been removed.
@@ -2039,22 +996,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N87" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5211" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<20>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<20>1" (ROM) removed.
-    The signal "IOWriteData<20>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<20>1" (ROM) removed.
-    The signal "processor/SrcB<20>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_20" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<20>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N84" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N85" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N82" is
 sourceless and has been removed.
@@ -2063,22 +1005,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N83" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX51111" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<19>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<19>1" (ROM) removed.
-    The signal "IOWriteData<19>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<19>1" (ROM) removed.
-    The signal "processor/SrcB<19>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_19" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<19>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N80" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N81" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N78" is
 sourceless and has been removed.
@@ -2087,22 +1014,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N79" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX5011" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<18>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<18>1" (ROM) removed.
-    The signal "IOWriteData<18>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<18>1" (ROM) removed.
-    The signal "processor/SrcB<18>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_18" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<18>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N76" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N77" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N74" is
 sourceless and has been removed.
@@ -2111,22 +1023,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N75" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4911" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<17>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<17>1" (ROM) removed.
-    The signal "IOWriteData<17>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<17>1" (ROM) removed.
-    The signal "processor/SrcB<17>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_17" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<17>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N72" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N73" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N70" is
 sourceless and has been removed.
@@ -2135,22 +1032,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N71" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4811" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<16>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<16>1" (ROM) removed.
-    The signal "IOWriteData<16>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<16>1" (ROM) removed.
-    The signal "processor/SrcB<16>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_16" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<16>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N68" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N69" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N66" is
 sourceless and has been removed.
@@ -2159,22 +1041,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N67" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4711" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<15>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<15>1" (ROM) removed.
-    The signal "IOWriteData<15>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<15>1" (ROM) removed.
-    The signal "processor/SrcB<15>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_15" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<15>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N64" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N65" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N62" is
 sourceless and has been removed.
@@ -2183,22 +1050,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N63" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4611" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<14>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<14>1" (ROM) removed.
-    The signal "IOWriteData<14>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<14>1" (ROM) removed.
-    The signal "processor/SrcB<14>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_14" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<14>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N60" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N61" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N58" is
 sourceless and has been removed.
@@ -2207,22 +1059,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N59" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4511" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<13>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<13>1" (ROM) removed.
-    The signal "IOWriteData<13>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<13>1" (ROM) removed.
-    The signal "processor/SrcB<13>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_13" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<13>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N56" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N57" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N54" is
 sourceless and has been removed.
@@ -2231,22 +1068,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N55" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4411" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<12>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<12>1" (ROM) removed.
-    The signal "IOWriteData<12>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<12>1" (ROM) removed.
-    The signal "processor/SrcB<12>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_12" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<12>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N52" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N53" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N50" is
 sourceless and has been removed.
@@ -2255,22 +1077,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N51" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4311" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<11>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<11>1" (ROM) removed.
-    The signal "IOWriteData<11>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<11>1" (ROM) removed.
-    The signal "processor/SrcB<11>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_11" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<11>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N48" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N49" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N46" is
 sourceless and has been removed.
@@ -2279,22 +1086,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N47" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4211" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<10>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<10>1" (ROM) removed.
-    The signal "IOWriteData<10>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<10>1" (ROM) removed.
-    The signal "processor/SrcB<10>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_10" (FF)
-removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<10>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N44" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N45" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N42" is
 sourceless and has been removed.
@@ -2303,21 +1095,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N43" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX41111" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<9>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<9>1" (ROM) removed.
-    The signal "IOWriteData<9>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<9>1" (ROM) removed.
-    The signal "processor/SrcB<9>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_9" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<9>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N40" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N41" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N38" is
 sourceless and has been removed.
@@ -2326,21 +1104,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N39" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX4011" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<8>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<8>1" (ROM) removed.
-    The signal "IOWriteData<8>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<8>1" (ROM) removed.
-    The signal "processor/SrcB<8>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_8" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<8>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N36" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N37" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N34" is
 sourceless and has been removed.
@@ -2349,21 +1113,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N35" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3911" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<7>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<7>1" (ROM) removed.
-    The signal "IOWriteData<7>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<7>1" (ROM) removed.
-    The signal "processor/SrcB<7>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_7" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<7>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N32" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N33" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N30" is
 sourceless and has been removed.
@@ -2372,21 +1122,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N31" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3811" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<6>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<6>1" (ROM) removed.
-    The signal "IOWriteData<6>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<6>1" (ROM) removed.
-    The signal "processor/SrcB<6>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_6" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<6>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N28" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N29" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N26" is
 sourceless and has been removed.
@@ -2395,21 +1131,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N27" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3711" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<5>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<5>1" (ROM) removed.
-    The signal "IOWriteData<5>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<5>1" (ROM) removed.
-    The signal "processor/SrcB<5>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_5" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<5>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N24" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N25" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N22" is
 sourceless and has been removed.
@@ -2418,21 +1140,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N23" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3611" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<4>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<4>1" (ROM) removed.
-    The signal "IOWriteData<4>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<4>1" (ROM) removed.
-    The signal "processor/SrcB<4>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_4" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<4>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N20" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N21" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N18" is
 sourceless and has been removed.
@@ -2441,21 +1149,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N19" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3511" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<3>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<3>1" (ROM) removed.
-    The signal "IOWriteData<3>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<3>1" (ROM) removed.
-    The signal "processor/SrcB<3>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_3" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<3>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N16" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N17" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N14" is
 sourceless and has been removed.
@@ -2464,21 +1158,7 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N15" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3411" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<2>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<2>1" (ROM) removed.
-    The signal "IOWriteData<2>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<2>1" (ROM) removed.
-    The signal "processor/SrcB<2>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_2" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<2>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N12" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N13" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N10" is
 sourceless and has been removed.
@@ -2487,392 +1167,342 @@ sourceless and has been removed.
 removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N11" is
 sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3311" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<1>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<1>1" (ROM) removed.
-    The signal "IOWriteData<1>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<1>1" (ROM) removed.
-    The signal "processor/SrcB<1>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_1" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<1>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N8" is
-sourceless and has been removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N9" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N4" is
 sourceless and has been removed.
  Sourceless block
 "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX11" (ROM)
 removed.
-The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N5" is
-sourceless and has been removed.
- Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3211" (ROM)
-removed.
-  The signal "processor/i_regf/Read2<0>" is sourceless and has been removed.
-   Sourceless block "processor/i_regf/RD2<0>1" (ROM) removed.
-    The signal "IOWriteData<0>" is sourceless and has been removed.
-   Sourceless block "processor/SrcB<0>1" (ROM) removed.
-    The signal "processor/SrcB<0>" is sourceless and has been removed.
-   Sourceless block
-"processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_0" (FF) removed.
-    The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<0>"
-is sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N6" is
 sourceless and has been removed.
 The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/N7" is
 sourceless and has been removed.
-
-The trimmed logic reported below is either:
-   1. part of a cycle
-   2. part of disabled logic
-   3. a side-effect of other trimmed logic
-
-The signal "N0" is unused and has been removed.
- Unused block "processor/Result<0>2_SW0" (ROM) removed.
-  The signal "processor/PC<4>" is unused and has been removed.
-   Unused block "processor/PC_4" (FF) removed.
-    The signal "processor/PCCalc<4>" is unused and has been removed.
-     Unused block "processor/Madd_PCPlus4_xor<4>" (XOR) removed.
-      The signal "processor/Madd_PCPlus4_cy<3>" is unused and has been removed.
-       Unused block "processor/Madd_PCPlus4_cy<3>" (MUX) removed.
-        The signal "processor/Madd_PCPlus4_cy<2>" is unused and has been removed.
-         Unused block "processor/Madd_PCPlus4_cy<2>" (MUX) removed.
-          The signal "processor/Madd_PCPlus4_lut<2>" is unused and has been removed.
-           Unused block "processor/Madd_PCPlus4_lut<2>_INV_0" (BUF) removed.
-            The signal "processor/PC<2>" is unused and has been removed.
-             Unused block "processor/PC_2" (FF) removed.
-              The signal "processor/PCCalc<2>" is unused and has been removed.
-               Unused block "processor/Madd_PCPlus4_xor<2>" (XOR) removed.
-        The signal "processor/Madd_PCPlus4_cy<3>_rt" is unused and has been removed.
-         Unused block "processor/Madd_PCPlus4_cy<3>_rt" (ROM) removed.
-          The signal "processor/PC<3>" is unused and has been removed.
-           Unused block "processor/PC_3" (FF) removed.
-            The signal "processor/PCCalc<3>" is unused and has been removed.
-             Unused block "processor/Madd_PCPlus4_xor<3>" (XOR) removed.
-      The signal "processor/Madd_PCPlus4_cy<4>_rt" is unused and has been removed.
-       Unused block "processor/Madd_PCPlus4_cy<4>_rt" (ROM) removed.
-The signal "processor/ALUControl<1>" is unused and has been removed.
- Unused block "processor/Instr<10>1" (ROM) removed.
-  The signal "processor/PC_3_2" is unused and has been removed.
-   Unused block "processor/PC_3_2" (FF) removed.
-  The signal "processor/PC_5_2" is unused and has been removed.
-   Unused block "processor/PC_5_2" (FF) removed.
-    The signal "processor/PCCalc<5>" is unused and has been removed.
-     Unused block "processor/Madd_PCPlus4_xor<5>" (XOR) removed.
-      The signal "processor/Madd_PCPlus4_cy<4>" is unused and has been removed.
-       Unused block "processor/Madd_PCPlus4_cy<4>" (MUX) removed.
-      The signal "processor/Madd_PCPlus4_xor<5>_rt" is unused and has been removed.
-       Unused block "processor/Madd_PCPlus4_xor<5>_rt" (ROM) removed.
-        The signal "processor/PC<5>" is unused and has been removed.
-         Unused block "processor/PC_5" (FF) removed.
-  The signal "processor/PC_4_2" is unused and has been removed.
-   Unused block "processor/PC_4_2" (FF) removed.
-The signal "processor/Instr<10>1" is unused and has been removed.
- Unused block "processor/Instr<10>1_1" (ROM) removed.
-  The signal "processor/PC_2_2" is unused and has been removed.
-   Unused block "processor/PC_2_2" (FF) removed.
-The signal "processor/Instr<10>11" is unused and has been removed.
- Unused block "processor/Instr<10>1_2" (ROM) removed.
-The signal "processor/Instr<16>" is unused and has been removed.
- Unused block "processor/i_imem/Mrom_RD481111" (ROM) removed.
-  The signal "processor/PC_2_1" is unused and has been removed.
-   Unused block "processor/PC_2_1" (FF) removed.
-  The signal "processor/PC_5_1" is unused and has been removed.
-   Unused block "processor/PC_5_1" (FF) removed.
-  The signal "processor/PC_4_1" is unused and has been removed.
-   Unused block "processor/PC_4_1" (FF) removed.
-The signal "processor/Instr<19>" is unused and has been removed.
- Unused block "processor/Instr<19>1" (ROM) removed.
-  The signal "processor/PC_3_1" is unused and has been removed.
-   Unused block "processor/PC_3_1" (FF) removed.
-The signal "processor/Instr<19>1" is unused and has been removed.
- Unused block "processor/Instr<19>1_1" (ROM) removed.
-The signal "processor/Instr<23>" is unused and has been removed.
- Unused block "processor/i_imem/Mrom_RD46111" (ROM) removed.
-The signal "processor/Instr<24>" is unused and has been removed.
- Unused block "processor/i_imem/Mrom_RD48112" (ROM) removed.
-The signal "processor/RegWrite" is unused and has been removed.
- Unused block "processor/i_cont/RegWrite1" (ROM) removed.
-The signal "processor/Result<5>3" is unused and has been removed.
- Unused block "processor/Result<0>11" (ROM) removed.
-The signal "processor/i_imem/Mrom_RD481111" is unused and has been removed.
- Unused block "processor/i_imem/Mrom_RD481111_1" (ROM) removed.
-The signal "processor/i_imem/Mrom_RD4811111" is unused and has been removed.
- Unused block "processor/i_imem/Mrom_RD481111_2" (ROM) removed.
-The signal "processor/i_regf/RD1_and0000" is unused and has been removed.
- Unused block "processor/i_regf/RD1_and00001" (ROM) removed.
-The signal "processor/i_regf/RD2_and0000" is unused and has been removed.
- Unused block "processor/i_regf/RD2_and00001" (ROM) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram1"
-(RAM16X1D) removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<31>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<30>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<29>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<28>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<27>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<26>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<25>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<24>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<23>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<22>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<21>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<20>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<19>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<18>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<17>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<16>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<15>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<14>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<13>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<12>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<11>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<10>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<9>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<8>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<7>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<6>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<5>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<4>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<3>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<2>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<1>"
+is sourceless and has been removed.
+The signal "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int<0>"
+is sourceless and has been removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram10"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram11"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram12"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram13"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram14"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram15"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram16"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram17"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram18"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram19"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram2"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram20"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram21"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram22"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram23"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram24"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram25"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram26"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram27"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram28"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram29"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram3"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram30"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram31"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram32"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram33"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram34"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram35"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram36"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram37"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram38"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram39"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram4"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram40"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram41"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram42"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram43"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram44"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram45"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram46"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram47"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram48"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram49"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram5"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram50"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram51"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram52"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram53"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram54"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram55"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram56"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram57"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram58"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram59"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram6"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram60"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram61"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram62"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram63"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram64"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram7"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram8"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram9"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/write_ctrl"
-(ROM) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_0"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_1"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_10"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_11"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_12"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_13"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_14"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_15"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_16"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_17"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_18"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_19"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_2"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_20"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_21"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_22"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_23"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_24"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_25"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_26"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_27"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_28"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_29"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_3"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_30"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_31"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_4"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_5"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_6"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_7"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_8"
+(FF) removed.
+Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_9"
+(FF) removed.
 Unused block "processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/write_ctrl1"
 (ROM) removed.
 Unused block "processor/i_regf/i_portA/BU2/XST_GND" (ZERO) removed.
 Unused block "processor/i_regf/i_portA/GND" (ZERO) removed.
 Unused block "processor/i_regf/i_portA/VCC" (ONE) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram1"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram10"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram11"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram12"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram13"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram14"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram15"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram16"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram17"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram18"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram19"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram2"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram20"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram21"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram22"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram23"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram24"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram25"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram26"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram27"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram28"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram29"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram3"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram30"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram31"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram32"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram33"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram34"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram35"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram36"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram37"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram38"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram39"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram4"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram40"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram41"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram42"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram43"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram44"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram45"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram46"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram47"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram48"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram49"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram5"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram50"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram51"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram52"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram53"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram54"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram55"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram56"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram57"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram58"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram59"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram6"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram60"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram61"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram62"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram63"
 (RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram64"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram7"
-(RAM16X1D) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram8"
 (RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram9"
-(RAM16X1D) removed.
-Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/write_ctrl"
-(ROM) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_0"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_1"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_10"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_11"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_12"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_13"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_14"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_15"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_16"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_17"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_18"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_19"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_2"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_20"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_21"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_22"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_23"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_24"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_25"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_26"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_27"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_28"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_29"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_3"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_30"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_31"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_4"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_5"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_6"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_7"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_8"
+(FF) removed.
+Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/qdpo_int_9"
+(FF) removed.
 Unused block "processor/i_regf/i_portB/BU2/U0/gen_dp_ram.dpram_inst/write_ctrl1"
 (ROM) removed.
 Unused block "processor/i_regf/i_portB/BU2/XST_GND" (ZERO) removed.
@@ -2907,6 +1537,8 @@ Section 6 - IOB Properties
 | LED<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | RESET                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| SWITCHES<0>                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| SWITCHES<1>                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

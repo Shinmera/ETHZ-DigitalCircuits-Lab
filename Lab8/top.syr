@@ -4,15 +4,15 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: top.prj
@@ -165,7 +165,6 @@ Analyzing module <clockdiv> in library <work>.
 Module <clockdiv> is correct for synthesis.
  
 Analyzing module <MIPS> in library <work>.
-WARNING:Xst:863 - "MIPS.v" line 132: Name conflict (<Zero> and <zero>, renaming Zero as zero_rnm0).
 Module <MIPS> is correct for synthesis.
  
 Analyzing module <InstructionMemory> in library <work>.
@@ -246,9 +245,6 @@ Unit <RegisterFile> synthesized.
 
 Synthesizing Unit <MIPS>.
     Related source file is "MIPS.v".
-WARNING:Xst:653 - Signal <zero_rnm0> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:646 - Signal <zero> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <IsMemWrite> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <ALUControl<5:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 32-bit register for signal <PC>.
     Found 32-bit adder for signal <PCBranch>.
@@ -262,8 +258,6 @@ Synthesizing Unit <top>.
     Related source file is "top.v".
 WARNING:Xst:1780 - Signal <IOin> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <IOWriteData<31:28>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <IOReadData> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
-WARNING:Xst:646 - Signal <IOAddr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-of-4 decoder for signal <AN>.
     Found 16-bit up counter for signal <DispCount>.
     Found 7-bit 4-to-1 multiplexer for signal <DispDigit>.
@@ -334,8 +328,8 @@ Macro Statistics
  64x32-bit single-port distributed RAM                 : 1
 # ROMs                                                 : 1
  64x32-bit ROM                                         : 1
-# Adders/Subtractors                                   : 2
- 32-bit adder                                          : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
  32-bit adder carry in                                 : 1
 # Counters                                             : 2
  16-bit up counter                                     : 1
@@ -355,8 +349,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <PC_1> (without init value) has a constant value of 0 in block <MIPS>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PC_0> (without init value) has a constant value of 0 in block <MIPS>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <PC_31> of sequential type is unconnected in block <MIPS>.
 WARNING:Xst:2677 - Node <PC_30> of sequential type is unconnected in block <MIPS>.
 WARNING:Xst:2677 - Node <PC_29> of sequential type is unconnected in block <MIPS>.
@@ -381,8 +373,8 @@ WARNING:Xst:2677 - Node <PC_11> of sequential type is unconnected in block <MIPS
 WARNING:Xst:2677 - Node <PC_10> of sequential type is unconnected in block <MIPS>.
 WARNING:Xst:2677 - Node <PC_9> of sequential type is unconnected in block <MIPS>.
 WARNING:Xst:2677 - Node <PC_8> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <PC_7> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <PC_6> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PC_1> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <PC_0> of sequential type is unconnected in block <MIPS>.
 
 Optimizing unit <top> ...
 
@@ -391,58 +383,16 @@ Optimizing unit <ALU> ...
 Optimizing unit <RegisterFile> ...
 
 Optimizing unit <MIPS> ...
-WARNING:Xst:1710 - FF/Latch <DispReg_27> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_26> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_25> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_24> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_20> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_19> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_18> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_17> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_16> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_14> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DispReg_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr64>, <processor/i_dmem/Mram_DataArr63> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr62>, <processor/i_dmem/Mram_DataArr61> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr60>, <processor/i_dmem/Mram_DataArr59> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr58>, <processor/i_dmem/Mram_DataArr57> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr56>, <processor/i_dmem/Mram_DataArr55> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr48>, <processor/i_dmem/Mram_DataArr47> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr46>, <processor/i_dmem/Mram_DataArr45> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr34>, <processor/i_dmem/Mram_DataArr33> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr28>, <processor/i_dmem/Mram_DataArr27> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr26>, <processor/i_dmem/Mram_DataArr25> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr24>, <processor/i_dmem/Mram_DataArr23> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr20>, <processor/i_dmem/Mram_DataArr19> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr18>, <processor/i_dmem/Mram_DataArr17> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr14>, <processor/i_dmem/Mram_DataArr13> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr12>, <processor/i_dmem/Mram_DataArr11> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <processor/i_dmem/Mram_DataArr10>, <processor/i_dmem/Mram_DataArr9> are equivalent, second RAM is removed
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 13.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 24.
 FlipFlop processor/PC_2 has been replicated 2 time(s)
 FlipFlop processor/PC_3 has been replicated 2 time(s)
 FlipFlop processor/PC_4 has been replicated 2 time(s)
 FlipFlop processor/PC_5 has been replicated 2 time(s)
+FlipFlop processor/PC_6 has been replicated 1 time(s)
+FlipFlop processor/PC_7 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -450,8 +400,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 30
- Flip-Flops                                            : 30
+# Registers                                            : 62
+ Flip-Flops                                            : 62
 
 =========================================================================
 
@@ -477,35 +427,39 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 13
+# IOs                              : 15
 
 Cell Usage :
-# BELS                             : 499
+# BELS                             : 735
 #      GND                         : 5
 #      INV                         : 3
-#      LUT1                        : 18
-#      LUT2                        : 83
-#      LUT2_L                      : 5
-#      LUT3                        : 175
-#      LUT3_D                      : 1
-#      LUT4                        : 81
-#      LUT4_D                      : 2
-#      LUT4_L                      : 16
-#      MUXCY                       : 55
+#      LUT1                        : 20
+#      LUT2                        : 53
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 176
+#      LUT3_D                      : 6
+#      LUT3_L                      : 35
+#      LUT4                        : 239
+#      LUT4_D                      : 41
+#      LUT4_L                      : 12
+#      MUXCY                       : 62
+#      MUXF5                       : 18
 #      VCC                         : 3
-#      XORCY                       : 52
-# FlipFlops/Latches                : 158
+#      XORCY                       : 60
+# FlipFlops/Latches                : 190
 #      FD                          : 128
 #      FDC                         : 18
-#      FDP                         : 12
-# RAMS                             : 176
+#      FDCE                        : 28
+#      FDP                         : 16
+# RAMS                             : 192
 #      RAM16X1D                    : 128
-#      RAM32X1S                    : 48
+#      RAM32X1S                    : 64
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 12
-#      IBUF                        : 1
+# IO Buffers                       : 14
+#      IBUF                        : 3
 #      OBUF                        : 11
 =========================================================================
 
@@ -514,13 +468,13 @@ Device utilization summary:
 
 Selected Device : 3s200ft256-4 
 
- Number of Slices:                      256  out of   1920    13%  
- Number of Slice Flip Flops:            158  out of   3840     4%  
- Number of 4 input LUTs:                736  out of   3840    19%  
-    Number used as logic:               384
-    Number used as RAMs:                352
- Number of IOs:                          13
- Number of bonded IOBs:                  13  out of    173     7%  
+ Number of Slices:                      374  out of   1920    19%  
+ Number of Slice Flip Flops:            190  out of   3840     4%  
+ Number of 4 input LUTs:                971  out of   3840    25%  
+    Number used as logic:               587
+    Number used as RAMs:                384
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    173     8%  
  Number of GCLKs:                         2  out of      8    25%  
 
 ---------------------------
@@ -544,8 +498,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
+CLK1(ClockDiv/clk_en1:O)           | BUFG(*)(DispReg_0)     | 380   |
 FPGACLK                            | BUFGP                  | 2     |
-CLK1(ClockDiv/clk_en1:O)           | BUFG(*)(DispCount_0)   | 332   |
 -----------------------------------+------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -556,21 +510,64 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-RESET                              | IBUF                   | 30    |
+RESET                              | IBUF                   | 62    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 20.017ns (Maximum Frequency: 49.957MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 8.976ns
+   Minimum period: 24.248ns (Maximum Frequency: 41.241MHz)
+   Minimum input arrival time before clock: 4.352ns
+   Maximum output required time after clock: 9.721ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK1'
+  Clock period: 24.248ns (frequency: 41.241MHz)
+  Total number of paths / destination ports: 29052160 / 1944
+-------------------------------------------------------------------------
+Delay:               24.248ns (Levels of Logic = 22)
+  Source:            processor/PC_7_1 (FF)
+  Destination:       DispReg_0 (FF)
+  Source Clock:      CLK1 rising
+  Destination Clock: CLK1 rising
+
+  Data Path: processor/PC_7_1 to DispReg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.720   1.140  processor/PC_7_1 (processor/PC_7_1)
+     LUT4:I0->O          452   0.551   4.454  processor/i_cont/MemtoReg21 (processor/Instr<19>)
+     LUT2:I1->O            2   0.551   0.903  processor/i_cont/ALUSrc41_SW3 (N177)
+     LUT4_D:I3->O         17   0.551   1.371  processor/i_cont/ALUSrc41_1 (processor/i_cont/ALUSrc41)
+     LUT4:I3->O            2   0.551   0.903  processor/SrcB<1>1 (processor/SrcB<1>)
+     LUT4:I3->O            1   0.551   0.000  processor/i_alu/Madd_addout_lut<1> (processor/i_alu/Madd_addout_lut<1>)
+     MUXCY:S->O            1   0.500   0.000  processor/i_alu/Madd_addout_cy<1> (processor/i_alu/Madd_addout_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<2> (processor/i_alu/Madd_addout_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<3> (processor/i_alu/Madd_addout_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<4> (processor/i_alu/Madd_addout_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<5> (processor/i_alu/Madd_addout_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<6> (processor/i_alu/Madd_addout_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<7> (processor/i_alu/Madd_addout_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<8> (processor/i_alu/Madd_addout_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<9> (processor/i_alu/Madd_addout_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<10> (processor/i_alu/Madd_addout_cy<10>)
+     XORCY:CI->O           2   0.904   0.903  processor/i_alu/Madd_addout_xor<11> (processor/i_alu/addout<11>)
+     LUT4:I3->O            2   0.551   0.945  processor/i_alu/result<11>1 (processor/ALUResult<11>)
+     LUT4:I2->O            1   0.551   0.827  processor/i_alu/result<30>1_SW0 (N123)
+     LUT4:I3->O            1   0.551   0.000  processor/IsIO_cmp_eq0000_wg_lut<4> (processor/IsIO_cmp_eq0000_wg_lut<4>)
+     MUXCY:S->O            1   0.500   0.000  processor/IsIO_cmp_eq0000_wg_cy<4> (processor/IsIO_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          37   0.303   1.908  processor/IsIO_cmp_eq0000_wg_cy<5> (processor/IsIO)
+     LUT4:I3->O           28   0.551   1.830  processor/IOWriteEn1 (IOWriteEn)
+     FDCE:CE                   0.602          DispReg_0
+    ----------------------------------------
+    Total                     24.248ns (9.064ns logic, 15.184ns route)
+                                       (37.4% logic, 62.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'FPGACLK'
@@ -595,102 +592,61 @@ Delay:               3.182ns (Levels of Logic = 1)
                                        (46.3% logic, 53.7% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'CLK1'
-  Clock period: 20.017ns (frequency: 49.957MHz)
-  Total number of paths / destination ports: 7866526 / 1468
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK1'
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               20.017ns (Levels of Logic = 41)
-  Source:            processor/PC_2_1 (FF)
-  Destination:       processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram36 (RAM)
-  Source Clock:      CLK1 rising
+Offset:              4.352ns (Levels of Logic = 4)
+  Source:            SWITCHES<1> (PAD)
+  Destination:       processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram4 (RAM)
   Destination Clock: CLK1 rising
 
-  Data Path: processor/PC_2_1 to processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram36
+  Data Path: SWITCHES<1> to processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              5   0.720   1.260  processor/PC_2_1 (processor/PC_2_1)
-     LUT3:I0->O           64   0.551   2.036  processor/i_imem/Mrom_RD481111_1 (processor/i_imem/Mrom_RD481111)
-     begin scope: 'processor/i_regf/i_portB'
-     begin scope: 'BU2'
-     RAM16X1D:DPRA1->DPO    1   0.551   0.996  U0/gen_dp_ram.dpram_inst/Mram_ram1 (U0/gen_dp_ram.dpram_inst/N5)
-     LUT3:I1->O            3   0.551   0.975  U0/gen_dp_ram.dpram_inst/inst_LPM_MUX3211 (dpo(0))
-     end scope: 'BU2'
-     end scope: 'processor/i_regf/i_portB'
-     LUT3:I2->O            1   0.551   0.996  processor/SrcB<0>1 (processor/SrcB<0>)
-     LUT3:I1->O            1   0.551   0.000  processor/i_alu/Madd_addout_lut<0> (processor/i_alu/Madd_addout_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  processor/i_alu/Madd_addout_cy<0> (processor/i_alu/Madd_addout_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<1> (processor/i_alu/Madd_addout_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<2> (processor/i_alu/Madd_addout_cy<2>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<3> (processor/i_alu/Madd_addout_cy<3>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<4> (processor/i_alu/Madd_addout_cy<4>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<5> (processor/i_alu/Madd_addout_cy<5>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<6> (processor/i_alu/Madd_addout_cy<6>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<7> (processor/i_alu/Madd_addout_cy<7>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<8> (processor/i_alu/Madd_addout_cy<8>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<9> (processor/i_alu/Madd_addout_cy<9>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<10> (processor/i_alu/Madd_addout_cy<10>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<11> (processor/i_alu/Madd_addout_cy<11>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<12> (processor/i_alu/Madd_addout_cy<12>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<13> (processor/i_alu/Madd_addout_cy<13>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<14> (processor/i_alu/Madd_addout_cy<14>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<15> (processor/i_alu/Madd_addout_cy<15>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<16> (processor/i_alu/Madd_addout_cy<16>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<17> (processor/i_alu/Madd_addout_cy<17>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<18> (processor/i_alu/Madd_addout_cy<18>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<19> (processor/i_alu/Madd_addout_cy<19>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<20> (processor/i_alu/Madd_addout_cy<20>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<21> (processor/i_alu/Madd_addout_cy<21>)
-     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<22> (processor/i_alu/Madd_addout_cy<22>)
-     XORCY:CI->O           2   0.904   1.216  processor/i_alu/Madd_addout_xor<23> (processor/ALUResult<23>)
-     LUT4:I0->O            1   0.551   0.000  processor/IsIO_cmp_eq0000_wg_lut<0> (processor/IsIO_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  processor/IsIO_cmp_eq0000_wg_cy<0> (processor/IsIO_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  processor/IsIO_cmp_eq0000_wg_cy<1> (processor/IsIO_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  processor/IsIO_cmp_eq0000_wg_cy<2> (processor/IsIO_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.064   0.000  processor/IsIO_cmp_eq0000_wg_cy<3> (processor/IsIO_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.064   0.000  processor/IsIO_cmp_eq0000_wg_cy<4> (processor/IsIO_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O          33   0.303   1.885  processor/IsIO_cmp_eq0000_wg_cy<5> (processor/IsIO)
-     LUT4:I3->O            9   0.551   1.192  processor/Result<0>2 (processor/N3)
-     LUT3:I2->O            4   0.551   0.000  processor/Result<7> (processor/Result<7>)
+     IBUF:I->O             1   0.821   1.140  SWITCHES_1_IBUF (SWITCHES_1_IBUF)
+     LUT3:I0->O            1   0.551   0.827  processor/Result<1>2 (processor/Result<1>2)
+     LUT4:I3->O            4   0.551   0.000  processor/Result<1>42 (processor/Result<1>)
      begin scope: 'processor/i_regf/i_portA'
      begin scope: 'BU2'
-     RAM16X1D:D                0.462          U0/gen_dp_ram.dpram_inst/Mram_ram16
+     RAM16X1D:D                0.462          U0/gen_dp_ram.dpram_inst/Mram_ram4
     ----------------------------------------
-    Total                     20.017ns (9.461ns logic, 10.556ns route)
-                                       (47.3% logic, 52.7% route)
+    Total                      4.352ns (2.385ns logic, 1.967ns route)
+                                       (54.8% logic, 45.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK1'
-  Total number of paths / destination ports: 8 / 4
+  Total number of paths / destination ports: 57 / 11
 -------------------------------------------------------------------------
-Offset:              8.976ns (Levels of Logic = 2)
+Offset:              9.721ns (Levels of Logic = 3)
   Source:            DispCount_14 (FF)
-  Destination:       AN<3> (PAD)
+  Destination:       LED<6> (PAD)
   Source Clock:      CLK1 rising
 
-  Data Path: DispCount_14 to AN<3>
+  Data Path: DispCount_14 to LED<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.720   1.260  DispCount_14 (DispCount_14)
-     LUT2:I0->O            1   0.551   0.801  Mdecod_AN31 (AN_3_OBUF)
-     OBUF:I->O                 5.644          AN_3_OBUF (AN<3>)
+     FDC:C->Q             19   0.720   1.645  DispCount_14 (DispCount_14)
+     LUT3:I1->O            1   0.551   0.000  Mmux_DispDigit_461 (Mmux_DispDigit_46)
+     MUXF5:I0->O           1   0.360   0.801  Mmux_DispDigit_2_f5_5 (LED_6_OBUF)
+     OBUF:I->O                 5.644          LED_6_OBUF (LED<6>)
     ----------------------------------------
-    Total                      8.976ns (6.915ns logic, 2.061ns route)
-                                       (77.0% logic, 23.0% route)
+    Total                      9.721ns (7.275ns logic, 2.446ns route)
+                                       (74.8% logic, 25.2% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.44 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.77 secs
  
 --> 
 
 
-Total memory usage is 528352 kilobytes
+Total memory usage is 529900 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   68 (   0 filtered)
-Number of infos    :   19 (   0 filtered)
+Number of warnings :   30 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

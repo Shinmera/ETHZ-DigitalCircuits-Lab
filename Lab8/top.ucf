@@ -29,6 +29,8 @@ NET "AN[0]" LOC = "D14";
 
 # TODO PART II for Lab 8
 # add input port to read the switch value for speed control of the snake
+NET "SWITCHES[1]" LOC = "K13";
+NET "SWITCHES[0]" LOC = "K14";
 
 NET "FPGACLK" TNM_NET = "clk_net";
 TIMESPEC "TS_CLK" = PERIOD "clk_net" 20 ns ;

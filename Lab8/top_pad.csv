@@ -1,7 +1,7 @@
 #Release 14.5 - par P.58f (lin64)
 #Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-#Fri May 15 13:50:09 2015
+#Fri May 15 16:36:30 2015
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -175,8 +175,8 @@ K9,,,GND,,,,,,,,,,,,
 K10,,,GND,,,,,,,,,,,,
 K11,,,VCCO_3,,,3,,,,,2.50,,,,
 K12,,DIFFS,IO_L23N_3,UNUSED,,3,,,,,,,,,
-K13,,DIFFM,IO_L24P_3,UNUSED,,3,,,,,,,,,
-K14,,DIFFS,IO_L24N_3,UNUSED,,3,,,,,,,,,
+K13,SWITCHES<1>,IOB,IO_L24P_3,INPUT,LVCMOS25*,3,,,,NONE,,LOCATED,NO,NONE,
+K14,SWITCHES<0>,IOB,IO_L24N_3,INPUT,LVCMOS25*,3,,,,NONE,,LOCATED,NO,NONE,
 K15,,DIFFS,IO,UNUSED,,3,,,,,,,,,
 K16,,DIFFM,IO_L40P_3,UNUSED,,3,,,,,,,,,
 L1,,,VCCAUX,,,,,,,,2.5,,,,
