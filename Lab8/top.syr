@@ -4,15 +4,15 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: top.prj
@@ -258,6 +258,7 @@ Synthesizing Unit <top>.
     Related source file is "top.v".
 WARNING:Xst:1780 - Signal <IOin> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <IOWriteData<31:28>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <IOAddr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-of-4 decoder for signal <AN>.
     Found 16-bit up counter for signal <DispCount>.
     Found 7-bit 4-to-1 multiplexer for signal <DispDigit>.
@@ -430,21 +431,20 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 735
+# BELS                             : 770
 #      GND                         : 5
 #      INV                         : 3
 #      LUT1                        : 20
 #      LUT2                        : 53
-#      LUT2_D                      : 1
-#      LUT2_L                      : 1
-#      LUT3                        : 176
+#      LUT2_L                      : 2
+#      LUT3                        : 175
 #      LUT3_D                      : 6
 #      LUT3_L                      : 35
-#      LUT4                        : 239
-#      LUT4_D                      : 41
-#      LUT4_L                      : 12
+#      LUT4                        : 272
+#      LUT4_D                      : 27
+#      LUT4_L                      : 16
 #      MUXCY                       : 62
-#      MUXF5                       : 18
+#      MUXF5                       : 31
 #      VCC                         : 3
 #      XORCY                       : 60
 # FlipFlops/Latches                : 190
@@ -468,10 +468,10 @@ Device utilization summary:
 
 Selected Device : 3s200ft256-4 
 
- Number of Slices:                      374  out of   1920    19%  
+ Number of Slices:                      386  out of   1920    20%  
  Number of Slice Flip Flops:            190  out of   3840     4%  
- Number of 4 input LUTs:                971  out of   3840    25%  
-    Number used as logic:               587
+ Number of 4 input LUTs:                993  out of   3840    25%  
+    Number used as logic:               609
     Number used as RAMs:                384
  Number of IOs:                          15
  Number of bonded IOBs:                  15  out of    173     8%  
@@ -517,8 +517,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 24.248ns (Maximum Frequency: 41.241MHz)
-   Minimum input arrival time before clock: 4.352ns
+   Minimum period: 24.354ns (Maximum Frequency: 41.060MHz)
+   Minimum input arrival time before clock: 4.665ns
    Maximum output required time after clock: 9.721ns
    Maximum combinational path delay: No path found
 
@@ -528,10 +528,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK1'
-  Clock period: 24.248ns (frequency: 41.241MHz)
-  Total number of paths / destination ports: 29052160 / 1944
+  Clock period: 24.354ns (frequency: 41.060MHz)
+  Total number of paths / destination ports: 28588298 / 1944
 -------------------------------------------------------------------------
-Delay:               24.248ns (Levels of Logic = 22)
+Delay:               24.354ns (Levels of Logic = 38)
   Source:            processor/PC_7_1 (FF)
   Destination:       DispReg_0 (FF)
   Source Clock:      CLK1 rising
@@ -542,12 +542,13 @@ Delay:               24.248ns (Levels of Logic = 22)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDP:C->Q              1   0.720   1.140  processor/PC_7_1 (processor/PC_7_1)
-     LUT4:I0->O          452   0.551   4.454  processor/i_cont/MemtoReg21 (processor/Instr<19>)
-     LUT2:I1->O            2   0.551   0.903  processor/i_cont/ALUSrc41_SW3 (N177)
-     LUT4_D:I3->O         17   0.551   1.371  processor/i_cont/ALUSrc41_1 (processor/i_cont/ALUSrc41)
-     LUT4:I3->O            2   0.551   0.903  processor/SrcB<1>1 (processor/SrcB<1>)
-     LUT4:I3->O            1   0.551   0.000  processor/i_alu/Madd_addout_lut<1> (processor/i_alu/Madd_addout_lut<1>)
-     MUXCY:S->O            1   0.500   0.000  processor/i_alu/Madd_addout_cy<1> (processor/i_alu/Madd_addout_cy<1>)
+     LUT4:I0->O          456   0.551   4.477  processor/i_cont/MemtoReg21 (processor/Instr<19>)
+     LUT2:I1->O            2   0.551   0.903  processor/i_cont/ALUSrc41_SW3 (N195)
+     LUT4_D:I3->O         18   0.551   1.443  processor/i_cont/ALUSrc41_1 (processor/i_cont/ALUSrc41)
+     LUT4:I3->O            2   0.551   0.945  processor/SrcB<0>1 (processor/SrcB<0>)
+     LUT3:I2->O            1   0.551   0.000  processor/i_alu/Madd_addout_lut<0> (processor/i_alu/Madd_addout_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  processor/i_alu/Madd_addout_cy<0> (processor/i_alu/Madd_addout_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<1> (processor/i_alu/Madd_addout_cy<1>)
      MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<2> (processor/i_alu/Madd_addout_cy<2>)
      MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<3> (processor/i_alu/Madd_addout_cy<3>)
      MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<4> (processor/i_alu/Madd_addout_cy<4>)
@@ -557,17 +558,32 @@ Delay:               24.248ns (Levels of Logic = 22)
      MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<8> (processor/i_alu/Madd_addout_cy<8>)
      MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<9> (processor/i_alu/Madd_addout_cy<9>)
      MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<10> (processor/i_alu/Madd_addout_cy<10>)
-     XORCY:CI->O           2   0.904   0.903  processor/i_alu/Madd_addout_xor<11> (processor/i_alu/addout<11>)
-     LUT4:I3->O            2   0.551   0.945  processor/i_alu/result<11>1 (processor/ALUResult<11>)
-     LUT4:I2->O            1   0.551   0.827  processor/i_alu/result<30>1_SW0 (N123)
-     LUT4:I3->O            1   0.551   0.000  processor/IsIO_cmp_eq0000_wg_lut<4> (processor/IsIO_cmp_eq0000_wg_lut<4>)
-     MUXCY:S->O            1   0.500   0.000  processor/IsIO_cmp_eq0000_wg_cy<4> (processor/IsIO_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O          37   0.303   1.908  processor/IsIO_cmp_eq0000_wg_cy<5> (processor/IsIO)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<11> (processor/i_alu/Madd_addout_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<12> (processor/i_alu/Madd_addout_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<13> (processor/i_alu/Madd_addout_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<14> (processor/i_alu/Madd_addout_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<15> (processor/i_alu/Madd_addout_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<16> (processor/i_alu/Madd_addout_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<17> (processor/i_alu/Madd_addout_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<18> (processor/i_alu/Madd_addout_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<19> (processor/i_alu/Madd_addout_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<20> (processor/i_alu/Madd_addout_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<21> (processor/i_alu/Madd_addout_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  processor/i_alu/Madd_addout_cy<22> (processor/i_alu/Madd_addout_cy<22>)
+     XORCY:CI->O           2   0.904   0.903  processor/i_alu/Madd_addout_xor<23> (processor/i_alu/addout<23>)
+     LUT4:I3->O            2   0.551   1.216  processor/i_alu/result<23>1 (processor/ALUResult<23>)
+     LUT4:I0->O            1   0.551   0.000  processor/IsIO_cmp_eq0000_wg_lut<0> (processor/IsIO_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  processor/IsIO_cmp_eq0000_wg_cy<0> (processor/IsIO_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  processor/IsIO_cmp_eq0000_wg_cy<1> (processor/IsIO_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  processor/IsIO_cmp_eq0000_wg_cy<2> (processor/IsIO_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  processor/IsIO_cmp_eq0000_wg_cy<3> (processor/IsIO_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  processor/IsIO_cmp_eq0000_wg_cy<4> (processor/IsIO_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          35   0.303   1.896  processor/IsIO_cmp_eq0000_wg_cy<5> (processor/IsIO)
      LUT4:I3->O           28   0.551   1.830  processor/IOWriteEn1 (IOWriteEn)
      FDCE:CE                   0.602          DispReg_0
     ----------------------------------------
-    Total                     24.248ns (9.064ns logic, 15.184ns route)
-                                       (37.4% logic, 62.6% route)
+    Total                     24.354ns (9.601ns logic, 14.753ns route)
+                                       (39.4% logic, 60.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'FPGACLK'
@@ -595,7 +611,7 @@ Delay:               3.182ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK1'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              4.352ns (Levels of Logic = 4)
+Offset:              4.665ns (Levels of Logic = 4)
   Source:            SWITCHES<1> (PAD)
   Destination:       processor/i_regf/i_portA/BU2/U0/gen_dp_ram.dpram_inst/Mram_ram4 (RAM)
   Destination Clock: CLK1 rising
@@ -605,14 +621,14 @@ Offset:              4.352ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.821   1.140  SWITCHES_1_IBUF (SWITCHES_1_IBUF)
-     LUT3:I0->O            1   0.551   0.827  processor/Result<1>2 (processor/Result<1>2)
-     LUT4:I3->O            4   0.551   0.000  processor/Result<1>42 (processor/Result<1>)
+     LUT4:I0->O            1   0.551   1.140  processor/Result<1>46_SW1 (N94)
+     LUT4:I0->O            4   0.551   0.000  processor/Result<1>46 (processor/Result<1>)
      begin scope: 'processor/i_regf/i_portA'
      begin scope: 'BU2'
      RAM16X1D:D                0.462          U0/gen_dp_ram.dpram_inst/Mram_ram4
     ----------------------------------------
-    Total                      4.352ns (2.385ns logic, 1.967ns route)
-                                       (54.8% logic, 45.2% route)
+    Total                      4.665ns (2.385ns logic, 2.280ns route)
+                                       (51.1% logic, 48.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK1'
@@ -639,14 +655,14 @@ Offset:              9.721ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.77 secs
+Total CPU time to Xst completion: 12.08 secs
  
 --> 
 
 
-Total memory usage is 529900 kilobytes
+Total memory usage is 529516 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   30 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

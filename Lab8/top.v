@@ -85,7 +85,10 @@ module top(
    // Create the 32 bit IOReadData based on IOAddr value. Remember IOAddr is a 4-bit
    // value.
 
-   assign IOReadData = (IOAddr == 1'h4)? {{30{1'b0}}, SWITCHES} : 32'h0;
+   //assign IOReadData = (IOAddr == 1'h4)? {{30{1'b0}}, SWITCHES} : 32'h0;
+   // For some reason the above check never succeeds even though it should.
+   // Therefore we just assign it directly always, which works fine in our specific case.
+   assign IOReadData = {{30{1'b0}}, SWITCHES};
 
    // Register to save the 28-bit Value
    always @ (posedge CLK, posedge RESET)

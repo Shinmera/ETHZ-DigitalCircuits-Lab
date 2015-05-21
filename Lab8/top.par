@@ -1,7 +1,7 @@
 Release 14.5 par P.58f (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-linuy::  Fri May 15 16:36:26 2015
+linuy::  Thu May 21 14:20:40 2015
 
 par -w -intstyle ise -ol high -t 1 top_map.ncd top.ncd top.pcf 
 
@@ -23,7 +23,7 @@ Device Utilization Summary:
    Number of External IOBs                  15 out of 173     8%
       Number of LOCed IOBs                  15 out of 15    100%
 
-   Number of Slices                        369 out of 1920   19%
+   Number of Slices                        381 out of 1920   19%
       Number of SLICEMs                    128 out of 960    13%
 
 
@@ -42,35 +42,35 @@ Total REAL time at the beginning of Placer: 0 secs
 Total CPU  time at the beginning of Placer: 0 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:5248017d) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:524813d7) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:5248017d) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:524813d7) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:5248017d) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:524813d7) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:7d27b4ad) REAL time: 1 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:7d27c707) REAL time: 1 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:7d27b4ad) REAL time: 1 secs 
+Phase 5.36  Local Placement Optimization (Checksum:7d27c707) REAL time: 1 secs 
 
 Phase 6.8  Global Placement
-.............................................
+...............................
 .........
-....
-Phase 6.8  Global Placement (Checksum:26bdc923) REAL time: 2 secs 
+.....
+Phase 6.8  Global Placement (Checksum:a6be813c) REAL time: 2 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:26bdc923) REAL time: 2 secs 
+Phase 7.5  Local Placement Optimization (Checksum:a6be813c) REAL time: 2 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:f8da6b9f) REAL time: 2 secs 
+Phase 8.18  Placement Optimization (Checksum:103b1f84) REAL time: 2 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:f8da6b9f) REAL time: 2 secs 
+Phase 9.5  Local Placement Optimization (Checksum:103b1f84) REAL time: 2 secs 
 
 Total REAL time to Placer completion: 2 secs 
 Total CPU  time to Placer completion: 2 secs 
@@ -81,13 +81,13 @@ Writing design to file top.ncd
 Starting Router
 
 
-Phase  1  : 3197 unrouted;      REAL time: 2 secs 
+Phase  1  : 3301 unrouted;      REAL time: 2 secs 
 
-Phase  2  : 3031 unrouted;      REAL time: 2 secs 
+Phase  2  : 3134 unrouted;      REAL time: 2 secs 
 
-Phase  3  : 1001 unrouted;      REAL time: 2 secs 
+Phase  3  : 1098 unrouted;      REAL time: 2 secs 
 
-Phase  4  : 1001 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
+Phase  4  : 1098 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
 
 Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
 
@@ -118,7 +118,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|                 CLK |      BUFGMUX3| No   |  164 |  0.002     |  1.013      |
+|                 CLK |      BUFGMUX3| No   |  165 |  0.004     |  1.014      |
 +---------------------+--------------+------+------+------------+-------------+
 |       FPGACLK_BUFGP |      BUFGMUX0| No   |    1 |  0.000     |  1.010      |
 +---------------------+--------------+------+------+------------+-------------+

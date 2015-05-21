@@ -1,5 +1,5 @@
 #50 MHz FPGA board clock
-NET "FPGACLK" LOC = "T9" ;
+NET "FPGACLK" LOC = "T9";
 #Push button to reset the system
 NET "RESET" LOC = "L14";
 
@@ -27,8 +27,6 @@ NET "AN[1]" LOC = "G14";
 #Digit enable 0, (active low)
 NET "AN[0]" LOC = "D14";
 
-# TODO PART II for Lab 8
-# add input port to read the switch value for speed control of the snake
 NET "SWITCHES[1]" LOC = "K13";
 NET "SWITCHES[0]" LOC = "K14";
 
