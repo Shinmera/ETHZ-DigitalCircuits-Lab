@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/linus/Projects/ISE/Lab9_student/MIPS_isim_beh.exe" -prj "/home/linus/Projects/ISE/Lab9_student/MIPS_beh.prj" "work.MIPS" "work.glbl" 

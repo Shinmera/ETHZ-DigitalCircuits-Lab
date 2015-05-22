@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/linus/Projects/ISE/Lab9_student/MIPS.xst" -ofn "/home/linus/Projects/ISE/Lab9_student/MIPS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 MIPS.ngc MIPS.ngd  

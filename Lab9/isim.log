@@ -1,0 +1,23 @@
+ISim log file
+Running: /home/linus/Projects/ISE/Lab9_student/MIPS_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/linus/Projects/ISE/Lab9_student/MIPS_test_isim_beh.wdb 
+ISim P.58f (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+# restart
+# run all
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+Stopped at time : 1160 ns :  in File "/home/linus/Projects/ISE/Lab9_student/MIPS_test.v" Line 57 
+# exit 0
