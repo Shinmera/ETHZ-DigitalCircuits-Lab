@@ -1,0 +1,8 @@
+verilog isim_temp "reg_half.v"
+verilog isim_temp "RegisterFile.v"
+verilog isim_temp "InstructionMemory.v"
+verilog isim_temp "DataMemory.v"
+verilog isim_temp "ControlUnit.v"
+verilog isim_temp "ALU.v"
+verilog isim_temp "MIPS.v"
+verilog isim_temp "/opt/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v"
